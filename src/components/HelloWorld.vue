@@ -1,11 +1,10 @@
 <script>
+import iconsSrc from './Data.vue'
 export default {
-  props: {
-    iconsSrc: Object
-  },
   data() {
     return {
-      icons: ['Python', 'Django', 'Flask', 'Swift', 'PHP', 'HTML5', 'CSS3', 'JavaScript', 'JQuery', 'React', 'Vue', 'MySQL', 'C++', 'AdobeXD', 'Figma']
+      icons: ['Python', 'Django', 'Flask', 'Swift', 'PHP', 'HTML5', 'CSS3', 'JavaScript', 'JQuery', 'React', 'Vue', 'MySQL', 'C++', 'AdobeXD', 'Figma'],
+      iconsSrc: iconsSrc.iconsSrc
     }
   }
 }

@@ -1,38 +1,38 @@
 <script>
 
-
 export default {
   props: {
     title: String,
+    shortDescription: String,
     content: String,
     technologies: Array,
     images: Array,
     icon: String,
-    iconClass: String,
-    iconsSrc: Object
-  },
-  data() {
-    return {
-        
-    }
+    iconClass: String
   }
 }
-
 </script>
-<template>
-    <div class="card">
+<script setup>
+import data from './Data.vue'
+</script>
 
-        <div class="header">
-            <header>
-                <img class="icon" :class="iconClass" v-if="icon" :src="'src/media/' + icon"/>
-                <h3>{{title}}</h3>
-            </header>
-            <div class="technologies">
-                <img class="technology" v-for="tech in technologies.slice().reverse()" :title="tech" :alt="tech" :src="'src/media/technologies/'+iconsSrc[ tech ]"/>
+<template>
+    <div :id="title" class="card">
+        <router-link :to="'/'+title+'/details'">
+
+            <div class="header">
+                <header>
+                    <img class="icon" :class="iconClass" v-if="icon" :src="'src/media/' + icon"/>
+                    <h3>{{title}}</h3>
+                </header>
+                <div class="technologies">
+                    <img class="technology" v-for="tech in technologies.slice().reverse()" :title="tech" :alt="tech" :src="'src/media/technologies/'+data.iconsSrc[ tech ]"/>
+                </div>
             </div>
-        </div>
-        <!-- <img class="main-image" v-if="images" :src="'src/media/' + images[0]"/> -->
-        {{content}}
+            <!-- <img class="main-image" v-if="images" :src="'src/media/' + images[0]"/> -->
+            <p class="shortDescription">{{shortDescription}}</p>
+            {{content}}
+        </router-link>
     </div>
 </template>
 
@@ -97,5 +97,14 @@ export default {
     height: 30px;
     max-width: 60px;
     object-fit:contain;
+}
+.card p.shortDescription {
+    font-size: 15pt;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+a {
+  text-decoration: none;
+  color: var(--color-text);  
 }
 </style>
