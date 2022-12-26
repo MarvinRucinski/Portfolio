@@ -17,9 +17,7 @@ export default {
 </script>
 
 <template>
-  <router-link :to="'/#'+project.title">
-    <div class="back-link"></div>
-  </router-link>
+  <div class="back-link" @click="$router.go(-1)"></div>
   <div class="projectDescription">
     <header>
       <!-- <img src="" alt="" class="topImage"> -->
