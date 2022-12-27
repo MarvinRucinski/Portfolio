@@ -6,6 +6,12 @@ export default {
       icons: ['Python', 'Django', 'Flask', 'Swift', 'PHP', 'HTML5', 'CSS3', 'JavaScript', 'JQuery', 'React', 'Vue', 'MySQL', 'C++', 'AdobeXD', 'Figma'],
       iconsSrc: iconsSrc.iconsSrc
     }
+  },
+  methods: {
+    scrollToNextSection() {
+      const nextSection = document.querySelector('#projects');
+      nextSection.scrollIntoView({ behavior: 'smooth' });
+    }
   }
 }
 </script>
@@ -20,7 +26,7 @@ export default {
 
     </p> 
     <!-- TODO add social media (github, stackoverflow, ...) -->
-    <div class="arrow-circle">
+    <div class="arrow-circle" @click="scrollToNextSection">
       <!-- TODO add link to next section -->
       <div class="arrow"></div>
     </div>

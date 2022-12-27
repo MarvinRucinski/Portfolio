@@ -11,6 +11,7 @@ export default {
         iconClass: String,
         summary: String
     }
+    
 }
 </script>
 <script setup>
@@ -18,7 +19,7 @@ import data from './Data.vue'
 </script>
 
 <template>
-    <router-link custom :to="'/' + title + '/details'" v-slot="{ navigate }">
+    <router-link custom :to="'/' + title + '/details'" v-slot="{ navigate }" >
         <div :id="title" class="card" role="link" @click="navigate">
 
             <div class="header">

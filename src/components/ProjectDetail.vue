@@ -13,10 +13,8 @@ export default {
       project: project
     }
   },
-  methods: {
-    newlineText(text) {
-      return text.split('\n').map((str, index) => '<p>'+str+'</p>');
-    }
+  mounted() {
+    window.scrollTo(0,0);
   }
 }
 </script>
@@ -26,7 +24,9 @@ export default {
     <div class="arrow"></div>
   </div>
   <div class="projectDescription">
-    <img v-if="project.images" :src="'src/media/' + project.images[0]" alt="" class="topImage">
+    <div class="images" v-if="project.images">
+      <img v-for="image in project.images" :src="'src/media/' + image" alt="" class="topImage">
+    </div>
     
     <div class="content">
       <header>
@@ -57,6 +57,7 @@ header {
 .projectDescription {
     padding: 20px;
     display: flex;
+    gap: 20px;
 }
 .content .technologies {
     display: flex;
@@ -69,9 +70,28 @@ header {
     max-width: 60px;
     object-fit: contain;
 }
-.topImage {
+.images {
   width: 50%; 
+  /* max-height: 100vh; */
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  align-items: center;
+}
+.images > *:first-child {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.images > *:last-child {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.topImage {
+  object-fit: contain;
+  max-width: 100%;
   max-height: 700px;
+  margin-top: -1px;
 }
 .back-link .arrow {
   width: 15px;
