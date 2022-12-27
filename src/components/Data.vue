@@ -16,7 +16,7 @@ longDescription:`The app assigns points to roommates based on their contribution
 In addition, "Roomie Rewards" integrates with the Duties app to help distribute tasks fairly and reduce the burden on roommates who have accrued the most points. This helps to ensure that everyone is pulling their weight and contributing to a harmonious living environment.
 
 Overall, "Roomie Rewards" is a valuable tool for roommates looking to promote good behavior and create a more organized and efficient shared living space.`,
-technologies:['Python','Django','MySQL','Tailwind','HTML5','CSS3']},
+technologies:['Python','Django','MySQL','HTML5','CSS3']},
 
 
 
@@ -46,6 +46,7 @@ We understand that it can be difficult to remember everything that needs to be d
 But it's not just about getting the work done – we also want to make it easy for you to see how everyone is contributing to the cleaning efforts. That's why we have a dedicated page for displaying statistics and charts about who has completed the most tasks and how much progress has been made overall. This allows roommates to see who is pulling their weight and where there may be room for improvement.
 
 With our app, staying organized and keeping your apartment clean has never been easier. It's the perfect tool for anyone looking to live in a harmonious and well-maintained shared living space.`,
+images: ['sienkiewicza/dyzury/dyzury-page1.png','sienkiewicza/dyzury/dyzury-page2.png'],
 technologies:['PHP','MySQL','HTML5','JavaScript','CSS3','Python','ESP8266','ESPHome','OpenAI']},
 
 
@@ -138,7 +139,8 @@ As the founder of the SP2 Chatbot, I was responsible for creating and maintainin
 One of the key features of the SP2 Chatbot was its ability to provide real-time updates and notifications to students, ensuring that they always had access to the most up-to-date information.
 
 Overall, the SP2 Chatbot was a valuable resource for students at SP2 school, providing them with everything they needed to succeed in their academic pursuits. As a developer on the team, I was proud to contribute to the creation of this useful and user-friendly tool.`,
-technologies:['ChatFuel','Python','PHP']},
+technologies:['ChatFuel','Python','PHP'],
+images:['bot-sp2/bot mock-up.png']},
 
 
 
@@ -148,7 +150,14 @@ shortDescription:"A fun and exciting musical competition for students at my juni
 //write a summary of the Eurovision School Contest
 summary:"The Eurovision School Contest was a fun and exciting musical competition for students at my junior high school. It was a great opportunity for me to use my skills to create something that was enjoyed by so many people, and I am proud of the work that I did to make the Eurovision School Contest a success.",
 //write a long description of the Eurovision School Contest
-longDescription:`At my junior high school I was the one of the main organizers of the Eurovision School Contest, an exciting competition where groups of students created music videos that were then played at a final gala. I was responsible for creating the graphical interface that was displayed on the projector during the gala. This interface included animations, the music videos, and a live scoreboard. In order to make the gala more interactive, I also created a system for voting for the videos using the SP2 chatbot. Furthermore, I created a system for booking tickets to the final gala and the whole event was live streamed. The final gala was a great success, with the audience enjoying the music videos and being able to vote for their favorite. It was a great experience for me to be able to use my skills to create something that was enjoyed by so many people, and I am proud of the work that I did to make the Eurovision School Contest a success.`,
+longDescription:`As one of the main organizers of the Eurovision School Contest at my junior high school, I had a number of responsibilities that were crucial to the success of the event. Not only was I responsible for creating the graphical interface that was displayed on the projector during the final gala, but I also took charge of creating a system for booking tickets to the event and live streaming the entire competition. In addition, I created a system to cross reference the votes with the list of students in each class to prevent any instances of self-voting.
+
+One of the key features of the graphical interface that I created was the inclusion of animations, which added an extra layer of excitement and engagement for the audience. In addition to this, I also incorporated the music videos that were created by the participating groups of students, as well as a live scoreboard that kept track of the votes and scores throughout the competition.
+
+To make the gala even more interactive, I also developed a system for voting for the music videos using the SP2 chatbot. This allowed audience members to easily cast their votes for their favorite videos in real time, and contributed to the overall excitement and energy of the event.
+
+Overall, the final gala of the Eurovision School Contest was a huge success, with the audience thoroughly enjoying the music videos and the interactive voting system. It was a truly memorable experience for me to be able to use my skills and creativity to create something that was so well received by so many people, and I am proud of the work that I did to make the event such a success.`,
+images: ['eurovision/eurovision-fb.jpg','eurovision/eurovision-tickets.jpg'],
 technologies:['HTML5','JavaScript','CSS3','Python','PHP']},
 
 
@@ -165,6 +174,7 @@ The Take&Tie company won the Grad Prix "Produkcik 2019" competition, which was a
 The website was created using the PrestaShop open source e-commerce solution. It featured a user-friendly interface and an intuitive shopping cart. The website also included a feature that allowed customers to design their own shoelaces as a suggestion for us for new designs.
 
 Overall, the website and the online store were a great success, and I am proud of the work that I did to create them. The website and the online store were a great success, and I am proud of the work that I did to create them.`,
+images:['take-and-tie/prezentacja/prezentacja.001.jpeg','take-and-tie/prezentacja/prezentacja.004.jpeg','take-and-tie/prezentacja/prezentacja.005.jpeg','take-and-tie/prezentacja/prezentacja.006.jpeg'],
 technologies:['PrestaShop','PHP','HTML5','CSS3']},
 
 {title:"Escape Room Booking App",
@@ -175,7 +185,9 @@ longDescription: `The Escape Room was a part of the Take&Tie company. It was a r
 
 The booking app was created using the PHP programming language. It featured a user-friendly interface and an intuitive booking system. The app was used to book the escape room and to manage the bookings. The app was also used to manage the escape room itself, including sending notifications when the final puzzle was completed. The app was a great success, and I am proud of the work that I did to create it.`,
 
-technologies:['PHP','HTML5','JavaScript','CSS3']},
+technologies:['PHP','HTML5','JavaScript','CSS3'],
+images: ['escape-room/escape-room-1.png','escape-room/escape-room-2.png','escape-room/escape-room-3.png']
+},
 
 
 {title:"Quick Rotate",icon:"display-rotator/logo.png",iconClass:"inset",
@@ -195,7 +207,7 @@ longDescription:"AquaMonitor is a user-friendly iOS app that provides real-time 
 technologies:['Swift','iOS']},
 
 
-{title:"Spaceship",
+{title:"Spaceship",icon:"spaceship/spaceship miniaturka 50.png",
 shortDescription: "A game, where the player must avoid collision with space rocks.",
 summary:`I created a spaceship game that has been developed and refined over the years using various programming languages, including Scratch, Python, HTML and JavaScript, and Swift. In addition to developing the game, I have also worked on this in the Take&Tie company creating shoelaces featuring the spaceship from the game.`,
 longDescription:`My journey with this game began with Scratch, a visual programming language that allowed me to build a basic version of the game. From there, I continued to learn and expand my skills, eventually developing the game in Python, HTML and JavaScript, and Swift.
