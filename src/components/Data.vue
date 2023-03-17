@@ -3,24 +3,17 @@ export default {
 iconsSrc: {'Python': 'python-colored.svg', 'Django': 'django-colored.svg', 'Flask': 'flask.svg', 'Swift': 'swift-colored.svg', 'PHP': 'php-colored.svg', 'HTML5': 'html5-colored.svg', 'CSS3': 'css3-colored.svg', 'JavaScript': 'javascript-colored.svg', 'JQuery': 'jquery-colored.svg', 'React': 'react-colored.svg', 'Vue': 'vuejs-colored.svg', 'MySQL': 'mysql-colored.svg', 'C++': 'cplusplus-colored.svg', 'AdobeXD': 'xd-colored.svg', 'Figma': 'figma-colored.svg','PrestaShop':'prestashop.svg','ChatFuel':'chatfuel.svg','MicroPython':'MicroPython.svg','ESP8266':'esp8266.svg','Kotlin':'kotlin-colored.svg','PyGame':'pygame.svg','MacOS':'MacOS.svg','iOS':'iOS.svg','3D Printing':'3d-print-logo.png','WLED':'wled.png','Fusion360':'fusion360.png','ESPHome':'esphome.svg','OpenAI':'OpenAI.svg'},
 
 projects: [
+// TODO: add projects
 // MatMar
 // Athletic art studio
 // 3x3 cube
 // temperature monitoring and graphing app
-
-[{title:"Roommate Rewards",icon:"sienkiewicza/114.png",
-shortDescription: '"Roomie Rewards" is an app designed to incentivize good behavior among roommates.',
-summary:'It assigns points for contributions to maintaining a clean and organized shared living space, and integrates with the Duties app to distribute tasks fairly and reduce the burden on roommates with the most points. It is a valuable tool for promoting good behavior and creating a more efficient shared living space.',
-longDescription:`The app assigns points to roommates based on their contributions to maintaining a clean and organized shared living space. Good deeds such as emptying the dishwasher or washing a pan after another roommate are recognized and rewarded with points.
-
-In addition, "Roomie Rewards" integrates with the Duties app to help distribute tasks fairly and reduce the burden on roommates who have accrued the most points. This helps to ensure that everyone is pulling their weight and contributing to a harmonious living environment.
-
-Overall, "Roomie Rewards" is a valuable tool for roommates looking to promote good behavior and create a more organized and efficient shared living space.`,
-technologies:['Python','Django','MySQL','HTML5','CSS3']},
+// Line follower robot
+// smart plant pot
 
 
-
-
+//== In development
+[
 
 {title:"This portfolio",
 summary:`This portfolio is a web application created using Vue.js, with a focus on responsive design to ensure an optimal user experience. It contains descriptions, photos, and the technologies used in each project, to give users an overview of my capabilities and skills. It is a useful tool for showcasing my work and demonstrating my experience to potential employers or clients.`,
@@ -31,12 +24,15 @@ To ensure an optimal user experience, I implemented responsive design to make su
 Through this project, I was able to showcase my work and demonstrate my skills and experience to potential employers or clients. It serves as a useful tool for highlighting my capabilities and expertise.`,
 technologies:['Vue']},
 
-{title:"Process Line Control Panel",icon:"automatyk/logo.jpg",longDescription:"bla bla",technologies:['Vue']},
+
+
+{title:"Process Line Control Panel",icon:"automatyk/logo.jpg",longDescription:"In progres...",technologies:['Vue']},
 ],
 
 
-
-[{title:"Duties",icon:"sienkiewicza/114.png",
+//== Current
+[
+    {title:"Duties",icon:"sienkiewicza/114.png",
 shortDescription: "A web app that allows roommates to track and assign cleaning duties.", 
 summary:"This app allows users to create and track a list of tasks that need to be completed. It sends reminders via email and chatbot to encourage task completion. It also uses AI to generate humorous images and messages to motivate others to clean the apartment. Additionally, the app includes a page dedicated to displaying statistics and charts about how roommates are contributing to cleaning efforts.",
 longDescription: `This app is a comprehensive solution for roommates who want to stay organized and on top of their cleaning duties. With a simple and user-friendly interface, users can easily create a list of tasks that need to be completed around the apartment, assign those tasks to specific roommates, and track progress.
@@ -48,6 +44,20 @@ But it's not just about getting the work done – we also want to make it easy f
 With our app, staying organized and keeping your apartment clean has never been easier. It's the perfect tool for anyone looking to live in a harmonious and well-maintained shared living space.`,
 images: ['sienkiewicza/dyzury/dyzury-page1.png','sienkiewicza/dyzury/dyzury-page2.png'],
 technologies:['PHP','MySQL','HTML5','JavaScript','CSS3','Python','ESP8266','ESPHome','OpenAI']},
+
+
+
+{title:"Roommate Rewards",icon:"sienkiewicza/114.png",
+shortDescription: '"Roomie Rewards" is an app designed to incentivize good behavior among roommates.',
+summary:'It assigns points for contributions to maintaining a clean and organized shared living space, and integrates with the Duties app to distribute tasks fairly and reduce the burden on roommates with the most points. It is a valuable tool for promoting good behavior and creating a more efficient shared living space.',
+longDescription:`The app assigns points to roommates based on their contributions to maintaining a clean and organized shared living space. Good deeds such as emptying the dishwasher or washing a pan after another roommate are recognized and rewarded with points.
+
+In addition, "Roomie Rewards" integrates with the Duties app to help distribute tasks fairly and reduce the burden on roommates who have accrued the most points. This helps to ensure that everyone is pulling their weight and contributing to a harmonious living environment.
+
+Overall, "Roomie Rewards" is a valuable tool for roommates looking to promote good behavior and create a more organized and efficient shared living space.`,
+images: ['sienkiewicza/roommate-rewards/rr-kitchen.png'],
+technologies:['Python','Django','MySQL','HTML5','CSS3']},
+
 
 
 
@@ -70,6 +80,7 @@ longDescription:`The app is a comprehensive tool for roommates to stay organized
 
 
 Overall, the app is designed to be a central hub for roommates to access important information and stay organized. Whether you are at home or on the go, the app helps you stay informed and connected with your roommates.`,
+images: ['sienkiewicza/panel/panel-1.png','sienkiewicza/panel/panel-2.png'],
 technologies:['Python','Django','MySQL','React','HTML5','JavaScript','CSS3','Figma']},
 
 
@@ -82,9 +93,8 @@ longDescription:`The system I have designed is a convenient and efficient way to
 The system constantly scans the WiFi network for connected devices and compares their IP addresses to a list of registered users. It then updates each user's connection status on a web app, which displays a list of all users and their current status (e.g., "Online" or "Offline").
 
 Overall, this system is a valuable addition to any home or workplace because it provides a quick and easy way to track the presence of individuals and stay connected with others. It is a reliable and user-friendly tool that can greatly improve communication and coordination within a household or workplace without requiring any additional setup or configuration from users.`,
-
+images: ['sienkiewicza/tracker.png'],
 technologies:['ESP8266','MicroPython','Python','Django']},
-
 
 
 
@@ -97,9 +107,12 @@ Powered by the advanced OpenAI API, the Apartment Chatbot is able to understand 
 
 The interface of the Apartment Chatbot is intuitive and user-friendly, making it easy to use even for those who may not be tech-savvy. With its advanced technology, the chatbot is able to understand and respond to a wide range of requests and commands, ensuring that you and your roommates have all the information and support you need to keep your apartment clean and organized.
 
-Overall, the Apartment Chatbot is a powerful and valuable tool for maintaining a clean and orderly living space. Its advanced technology and intuitive interface make it an invaluable resource for you and your roommates, helping to make your lives easier and more efficient. So why wait? Start using the Apartment Chatbot today, and experience the benefits of a clean and organized apartment for yourself!`
-,technologies:['Python','OpenAI']}],
+Overall, the Apartment Chatbot is a powerful and valuable tool for maintaining a clean and orderly living space. Its advanced technology and intuitive interface make it an invaluable resource for you and your roommates, helping to make your lives easier and more efficient. So why wait? Start using the Apartment Chatbot today, and experience the benefits of a clean and organized apartment for yourself!`,
+images: ['sienkiewicza/bot/sienkiewicza-bot-mockup.png'],
+technologies:['Python','OpenAI']}],
 
+
+//== Completed Projects ==//
 [
 {title:"LO1+ App",
 shortDescription:"The LO1+ mobile app was designed for students at LO1 school and provided access to important information about their school life",
@@ -111,7 +124,7 @@ One of the key features of the LO1+ app was its ability to provide real-time upd
 Overall, the LO1+ app was a valuable resource for students at LO1 school, providing them with everything they needed to succeed in their academic pursuits. As a developer on the team, I was proud to contribute to the creation of this useful and user-friendly tool.`,
 icon:"lo1+/lo1+_logo.svg",iconClass:"app shadow",images:["lo1+/home.png"],technologies:['Swift','Python','Flask','PHP','AdobeXD','Kotlin']},
 
-
+// TODO: add video and photos
 {title:"LED Piano",icon:"led-piano/piano-top-view-svgrepo-com.svg",
 //Write a description of the LED Piano project, piano: modified Yamaha CLP-745, controller: ESP8266, 3D printed parts are used
 longDescription:`The LED Piano is a one-of-a-kind musical instrument that combines the traditional elements of a digital piano with the modern technology of an ESP8266 microcontroller and LED lights. By modifying a Yamaha CLP-745 digital piano and adding custom 3D-printed parts, I was able to transform the piano into a visually stunning and interactive instrument. The ESP8266 serves as the "brain" of the project, receiving MIDI signals from the piano and communicating with a script that displays the corresponding notes on the LED strip.
@@ -143,7 +156,7 @@ technologies:['ChatFuel','Python','PHP'],
 images:['bot-sp2/bot mock-up.png']},
 
 
-
+// TODO: add intro video
 {title:"Eurovision School Contest",icon:"eurovision/logo.png",iconClass:"",
 //write a short description of the Eurovision School Contest
 shortDescription:"A fun and exciting musical competition for students at my junior high school",
@@ -196,7 +209,7 @@ summary: "The app was created to address the inconvenience of constantly navigat
 longDescription: `I developed a simple macOS application that allows you to quickly and easily rotate your displayed content without the need to navigate to the system preferences. As someone who uses multiple displays on a regular basis, I found myself constantly going into the system preferences to change the orientation of my displays. It was frustrating and time-consuming, and I knew there had to be a better way. That's why I decided to create this app – to make it easier for me and others to quickly adjust the displays to our desired settings without having to go through the system preferences every time.
 
 In addition to the ability to rotate displays, the app also allows you to arrange your displays into predefined positions. This is especially useful if you have multiple displays and want to quickly snap them into place without having to manually drag and resize them. Whether you're a designer, developer, or just someone who values convenience, this app is sure to come in handy. It has already been a valuable addition to my own workflow, and I am excited to share it with others in my portfolio.`,
-
+images: ['display-rotator/rotator-ss.png'],
 technologies:['Swift','MacOS']},
 
 
@@ -204,6 +217,7 @@ technologies:['Swift','MacOS']},
 shortDescription: "This iOS application allows for real-time monitoring of the temperature in our swimming pool.",
 summary: "AquaMonitor is a user-friendly iOS app that provides real-time temperature monitoring for our swimming pool. With its straightforward interface AquaMonitor makes it quick and easy to keep track of the temperature of your pool at all times.",
 longDescription:"AquaMonitor is a user-friendly iOS app that provides real-time temperature monitoring for our swimming pool. With its straightforward interface AquaMonitor makes it quick and easy to keep track of the temperature of your pool at all times.",
+images: ['swimming-pool/swimming-pool-mockup.jpg'],
 technologies:['Swift','iOS']},
 
 
@@ -217,6 +231,7 @@ The objective of the game is simple yet compelling: players must navigate their 
 In addition to developing the game itself, I have also had the opportunity to work on a project in the Take&Tie Student company, in which we created shoelaces featuring the beloved spaceship from the game. This project allowed me to not only showcase my game development skills, but also my ability to think creatively and bring my creations to life in new and exciting ways.
 
 Overall, the spaceship game is a testament to my passion for game development and my determination to continuously learn and improve my skills. I am excited to see where my journey in this field takes me next.`,
+images:['spaceship/spaceship-mockup.jpg','spaceship/spaceship-shoelaces.png'],
 technologies:['HTML5','JavaScript','CSS3']},
 
 
@@ -228,7 +243,9 @@ longDescription:`Using the arrow keys, players can control the snake's movement 
 As the snake moves through the maze, it must avoid crashing into walls, as this will result in game over. However, the snake can also collect points by eating food items scattered throughout the maze. As the snake eats, it will grow longer, adding an additional layer of strategy to the game as players must carefully navigate the increasingly lengthy snake through the tight confines of the cube maze.
 
 Overall, my cubic snake game offers a fresh take on the classic snake game, adding an exciting twist with the addition of the 3D cube maze. Players will have to use quick reflexes and strategic thinking to successfully navigate the snake through the maze and emerge victorious.`,
-technologies:['Python','PyGame']},
+technologies:['Python','PyGame'],
+images: ['snake/snake-1.png','snake/snake-2.png']
+},
 
 
 {title:"Interconnected WLED Lamps",
