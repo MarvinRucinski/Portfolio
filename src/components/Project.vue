@@ -24,17 +24,17 @@ import data from './Data.vue'
 
             <div class="header">
                 <header>
-                    <img class="icon" :class="iconClass" v-if="icon" :src="'src/media/' + icon" />
+                    <img class="icon" :class="iconClass" v-if="icon" :src="'media/' + icon" />
                     <h3>{{ title }}</h3>
                 </header>
                 <div class="technologies">
                     <img class="technology" v-for="tech in technologies.slice().reverse()" :title="tech" :alt="tech"
-                        :src="'src/media/technologies/' + data.iconsSrc[tech]" />
+                        :src="'media/technologies/' + data.iconsSrc[tech]" />
                 </div>
             </div>
-            <!-- <img class="main-image" v-if="images" :src="'src/media/' + images[0]"/> -->
+            <!-- <img class="main-image" v-if="images" :src="'media/' + images[0]"/> -->
             <p v-if="shortDescription" class="shortDescription">{{ shortDescription }}</p>
-            {{ summary }}
+            <!-- {{ summary }} -->
         </div>
     </router-link>
 </template>
@@ -115,9 +115,9 @@ import data from './Data.vue'
 }
 
 .card p.shortDescription {
-    font-size: 15pt;
-    font-weight: 600;
-    margin: 10px 0;
+    font-size: 13pt;
+    font-weight: 500;
+    margin: 10px 0 0;
 }
 
 a {

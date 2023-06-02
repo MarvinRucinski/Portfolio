@@ -4,35 +4,95 @@ iconsSrc: {'Python': 'python-colored.svg', 'Django': 'django-colored.svg', 'Flas
 
 projects: [
 // TODO: add projects
-// MatMar
 // Athletic art studio
 // 3x3 cube
 // temperature monitoring and graphing app
-// Line follower robot
-// smart plant pot
-
-
-//== In development
-[
-
-{title:"This portfolio",
-summary:`This portfolio is a web application created using Vue.js, with a focus on responsive design to ensure an optimal user experience. It contains descriptions, photos, and the technologies used in each project, to give users an overview of my capabilities and skills. It is a useful tool for showcasing my work and demonstrating my experience to potential employers or clients.`,
-longDescription:`I built a web application using Vue.js as the front-end framework to serve as a collection of my various projects. The portfolio includes descriptions, photos, and the technologies used in each project, allowing users to easily browse through my work and get a sense of my capabilities.
-
-To ensure an optimal user experience, I implemented responsive design to make sure the portfolio looks great on a variety of devices. I also dedicated time to prototyping and testing different design approaches to ensure that the portfolio was easy to navigate.
-
-Through this project, I was able to showcase my work and demonstrate my skills and experience to potential employers or clients. It serves as a useful tool for highlighting my capabilities and expertise.`,
-technologies:['Vue']},
-
-
-
-{title:"Process Line Control Panel",icon:"automatyk/logo.jpg",longDescription:"In progres...",technologies:['Vue']},
-],
 
 
 //== Current
 [
-    {title:"Duties",icon:"sienkiewicza/114.png",
+
+{title:"The Student Camp App",icon:"pwr/oboz-logo.png",iconClass:"app",
+shortDescription: "A mobile app for the student camp for WrocTech students.", 
+summary:"",
+longDescription: `I can't reveal any details yet....`,
+images: [],
+technologies:['Vue','HTML5','JavaScript','CSS3','Python','Django']
+},
+
+{title:"Autonomous beverage dispenser",icon:"automatyk/logo.jpg",iconClass:"",
+shortDescription: "A robot that will locate a cup based on a vision system and fill it with a drink.", 
+summary:"",
+longDescription: `In the making...`,
+images: [],
+technologies: ['Fusion360','3D Printing']
+},
+
+],
+
+
+//== Completed Projects ==//
+[
+
+
+{title:"Process Line Control Panel",icon:"automatyk/logo.jpg",
+shortDescription: "A control panel for a process line created by the student scientific association \"Automatyk\"",
+longDescription:"Introducing the Vue.js-powered control panel for a Process Line by \"Automatyk,\" the student scientific association. The user-friendly interface empowers operators to efficiently manage and monitor process line operations. With real-time data visualization, customization options, and seamless integration, our control panel enhances productivity and optimizes performance.",
+images: ['automatyk/panel.png'],
+technologies:['Vue','HTML5','JavaScript','CSS3' ]},
+
+{title:"LO1+ App",
+shortDescription:"The LO1+ mobile app was designed for students at LO1 school and provided access to important information about their school life",
+summary:'The LO1+ app was a user-friendly mobile resource for students at LO1 school, providing access to important information and tools for academic success. It was available on iOS and Android platforms and featured a range of resources including a calendar of events, class schedules, and grades. It also provided real-time updates and notifications to ensure students had access to the most up-to-date information. The app was a valuable resource for students, helping them succeed in their academic pursuits.',
+longDescription:`As the founder the LO1+ app, I was responsible for creating and maintaining an intuitive and user-friendly mobile application that helped students of LO1 school access all necessary information regarding their school life. The app was available on both iOS and Android platforms, and featured a range of useful tools and resources for students, including a calendar of events, class schedules, grades, and more.
+
+One of the key features of the LO1+ app was its ability to provide real-time updates and notifications to students, ensuring that they always had access to the most up-to-date information.
+
+Overall, the LO1+ app was a valuable resource for students at LO1 school, providing them with everything they needed to succeed in their academic pursuits. As a developer on the team, I was proud to contribute to the creation of this useful and user-friendly tool.`,
+icon:"lo1+/lo1+_logo.svg",iconClass:"app shadow",images:["lo1+/home.png"],technologies:['Swift','Python','Flask','PHP','AdobeXD','Kotlin']},
+
+{title:"Smart Plant Pot",icon:"",iconClass:"",
+shortDescription: "A smart plant pot that monitors the soil moisture and automatically notifies the user when watering is needed.", 
+summary:"",
+longDescription: `As part of the project, a comprehensive system was created to monitor soil moisture in a plant pot. To enable accurate and continuous measurements, a microcontroller was used to read data from the moisture sensor installed in the pot. This allows users to track the moisture level in their plants in real-time and receive appropriate notifications through Facebook Messenger Bot in case of low moisture.
+
+An important feature of the system is the ability to store the history of moisture levels, enabling users to analyze long-term trends and adjust watering accordingly. This data can also be used for research purposes, such as studying the impact of weather conditions on soil moisture.
+
+The Facebook Messenger Bot, used to send notifications about the plant's watering needs, was implemented to provide users with a convenient and easy way to stay informed about the status of their plants. With this bot, users can be assured that they will always be up to date with their plant's needs.
+
+In this way, the system for monitoring soil moisture in a plant pot, using a microcontroller, sensor, and notifications through Facebook Messenger Bot, becomes a complete and functional solution, enabling users to conveniently and effectively care for their plants.`,
+images: ['smart-plant-pot/home.png','smart-plant-pot/bot.png','smart-plant-pot/plot.png'],
+technologies: ['ESP8266','Python','Django','MySQL','HTML5','JavaScript','CSS3', 'OpenAI']
+
+},
+
+{title:"Line follower robot",icon:"",iconClass:"",
+shortDescription: "A line follower robot. Whats the trick? It uses no microcontrollers or any other programmable components. It's based on a simple circuit with transistors and resistors.", 
+summary:"",
+longDescription: `Introducing our remarkable line follower robot, which defies conventional expectations by operating without microcontrollers or any other programmable components. This ingeniously designed robot relies solely on a simple circuit consisting of transistors and resistors to navigate its path.
+
+The secret behind this impressive creation lies in the clever implementation of analog circuitry. By utilizing transistors and resistors, the line follower robot can detect and respond to changes in the surface it traverses. As the robot encounters lines or contrasts in color, the circuitry interprets these variations and directs the robot's movements accordingly.
+
+This minimalist approach showcases the power of analog electronics and highlights the ingenuity of our design. By leveraging the inherent properties of transistors and resistors, we have crafted a robot capable of following lines and navigating complex paths with remarkable precision.
+
+The absence of microcontrollers and programmable components adds a unique charm to this line follower robot. Its simplicity not only makes it an accessible project for enthusiasts and beginners but also demonstrates the elegance of analog circuitry in solving real-world challenges.
+
+With our line follower robot, users can explore the fundamentals of robotics and gain a deeper understanding of analog electronics. It serves as a valuable educational tool and a testament to the endless possibilities of creative engineering.
+
+Discover the beauty of simplicity and witness the fascinating capabilities of our transistor and transistor-based line follower robot. Experience the joy of watching it effortlessly follow lines and embrace the elegance of analog circuitry in this remarkable innovation.`,
+images: ['line-follower/line-follower.png'],
+technologies: ['Fusion360','3D Printing']
+},
+
+// {title:"",icon:"",iconClass:"",
+// shortDescription: "", 
+// summary:"",
+// longDescription: ``,
+// images: [],
+// technologies: []
+// },
+
+{title:"Duties",icon:"sienkiewicza/114.png",
 shortDescription: "A web app that allows roommates to track and assign cleaning duties.", 
 summary:"This app allows users to create and track a list of tasks that need to be completed. It sends reminders via email and chatbot to encourage task completion. It also uses AI to generate humorous images and messages to motivate others to clean the apartment. Additionally, the app includes a page dedicated to displaying statistics and charts about how roommates are contributing to cleaning efforts.",
 longDescription: `This app is a comprehensive solution for roommates who want to stay organized and on top of their cleaning duties. With a simple and user-friendly interface, users can easily create a list of tasks that need to be completed around the apartment, assign those tasks to specific roommates, and track progress.
@@ -109,20 +169,19 @@ The interface of the Apartment Chatbot is intuitive and user-friendly, making it
 
 Overall, the Apartment Chatbot is a powerful and valuable tool for maintaining a clean and orderly living space. Its advanced technology and intuitive interface make it an invaluable resource for you and your roommates, helping to make your lives easier and more efficient. So why wait? Start using the Apartment Chatbot today, and experience the benefits of a clean and organized apartment for yourself!`,
 images: ['sienkiewicza/bot/sienkiewicza-bot-mockup.png'],
-technologies:['Python','OpenAI']}],
+technologies:['Python','OpenAI']},
+
+{title:"This portfolio",
+shortDescription:"A web application created using Vue.js to showcase my projects and skills.",
+summary:`This portfolio is a web application created using Vue.js, with a focus on responsive design to ensure an optimal user experience. It contains descriptions, photos, and the technologies used in each project, to give users an overview of my capabilities and skills. It is a useful tool for showcasing my work and demonstrating my experience to potential employers or clients.`,
+longDescription:`I built a web application using Vue.js as the front-end framework to serve as a collection of my various projects. The portfolio includes descriptions, photos, and the technologies used in each project, allowing users to easily browse through my work and get a sense of my capabilities.
+
+To ensure an optimal user experience, I implemented responsive design to make sure the portfolio looks great on a variety of devices. I also dedicated time to prototyping and testing different design approaches to ensure that the portfolio was easy to navigate.
+
+Through this project, I was able to showcase my work and demonstrate my skills and experience to potential employers or clients. It serves as a useful tool for highlighting my capabilities and expertise.`,
+technologies:['Vue']},
 
 
-//== Completed Projects ==//
-[
-{title:"LO1+ App",
-shortDescription:"The LO1+ mobile app was designed for students at LO1 school and provided access to important information about their school life",
-summary:'The LO1+ app was a user-friendly mobile resource for students at LO1 school, providing access to important information and tools for academic success. It was available on iOS and Android platforms and featured a range of resources including a calendar of events, class schedules, and grades. It also provided real-time updates and notifications to ensure students had access to the most up-to-date information. The app was a valuable resource for students, helping them succeed in their academic pursuits.',
-longDescription:`As the founder the LO1+ app, I was responsible for creating and maintaining an intuitive and user-friendly mobile application that helped students of LO1 school access all necessary information regarding their school life. The app was available on both iOS and Android platforms, and featured a range of useful tools and resources for students, including a calendar of events, class schedules, grades, and more.
-
-One of the key features of the LO1+ app was its ability to provide real-time updates and notifications to students, ensuring that they always had access to the most up-to-date information.
-
-Overall, the LO1+ app was a valuable resource for students at LO1 school, providing them with everything they needed to succeed in their academic pursuits. As a developer on the team, I was proud to contribute to the creation of this useful and user-friendly tool.`,
-icon:"lo1+/lo1+_logo.svg",iconClass:"app shadow",images:["lo1+/home.png"],technologies:['Swift','Python','Flask','PHP','AdobeXD','Kotlin']},
 
 // TODO: add video and photos
 {title:"LED Piano",icon:"led-piano/piano-top-view-svgrepo-com.svg",
@@ -134,6 +193,10 @@ Not only is the LED Piano a fun and innovative way to play music, but it also of
 shortDescription: "A unique musical instrument that I created to display the notes being played on an digital LED strip.",
 //rewrite a short summary of the LED Piano based on the longDescription above
 summary: "The LED Piano is a modified digital piano that combines traditional music-making with modern technology. I created it by modifying a Yamaha CLP-745 digital piano and adding custom 3D-printed parts, as well as an ESP8266 microcontroller and LED lights. The microcontroller receives MIDI signals from the piano and communicates with a script that displays the corresponding notes on the LED strip, allowing the player to see the music they are creating in a visually stunning way. The LED Piano can be used for creative musical compositions and as a tool for learning sheet music, making it a unique and innovative way to play and learn about music.",
+customHtml: `
+<iframe id="ytplayer" type="text/html" width="100%" height="100%"
+  src="https://youtube.com/embed/pJ7fCkMSCVU?autoplay=1"
+  frameborder="0"/>`,
 technologies:['ESP8266','C++',"Fusion360","3D Printing"]},
 
 
@@ -258,7 +321,18 @@ One of the lamps was a special gift for my girlfriend, and we have had a lot of 
 This project demonstrates my ability to work with hardware and software, as well as my creativity in finding new and innovative ways to use technology. The use of the 3D printer allowed me to create custom-designed lamps that are not only functional, but also visually appealing. The incorporation of the ESP8266 microcontroller and the modification of the WLED software required a strong understanding of both hardware and software, and I am proud of the end result.
 
 Overall, this project is a great example of my skills and capabilities as a maker and inventor, and I am excited to share it with you in my portfolio.`,
-technologies:['WLED','C++',"Fusion360","3D Printing"]}
+images: ['wled/wled-cube.jpg'],
+technologies:['WLED','C++',"Fusion360","3D Printing"]},
+
+{title:"MatMar Games",icon:"matmar/logo.jpg",iconClass:"",
+shortDescription: "A game development company that I founded with my friend.", 
+summary:"",
+longDescription: `Welcome to MatMar, an innovative game development company that began its journey in junior high school. Founded by Marvin and Mateusz, we discovered our passion for gaming and technology at a young age, leading us to embark on an incredible adventure together.
+
+At MatMar, we specialize in creating captivating games using Scratch, a visual programming language that allowed us to bring our imaginations to life. Through countless hours of dedication and experimentation, we honed our skills in game design, storytelling, and coding to deliver unique gaming experiences.`,
+images: ['matmar/webss.png'],
+technologies: []
+},
 
 
 ]

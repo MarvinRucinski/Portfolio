@@ -22,7 +22,7 @@ export default {
     <h1 class="">I'm <span class="blue">Marvin</span></h1>
     <p class="icons"> 
       <!-- TODO add icon description on hover -->
-      <a rel="noreferrer" v-for="tech in icons"><img :src="'src/media/technologies/'+iconsSrc[tech]" width="36" height="36" :alt="tech" :title="tech" /></a> 
+      <a rel="noreferrer" v-for="tech in icons"><img :src="'media/technologies/'+iconsSrc[tech]" width="36" height="36" :alt="tech" :title="tech" /></a> 
 
     </p> 
     <!-- TODO add social media (github, stackoverflow, ...) -->

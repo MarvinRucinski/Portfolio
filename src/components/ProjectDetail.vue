@@ -24,19 +24,21 @@ export default {
     <div class="arrow"></div>
   </div>
   <div class="projectDescription">
-    <div class="images" v-if="project.images">
-      <img v-for="image in project.images" :src="'src/media/' + image" alt="" class="topImage">
+    <div class="images" v-if="project.images || project.customHtml">
+      <img v-for="image in project.images" :src="'media/' + image" alt="" class="topImage">
+
+      <div style="width:100%;height:100%;" v-html="project.customHtml"></div>
     </div>
     
     <div class="content">
       <header>
         <div class="name">
-          <img class="icon" :class="project.iconClass" v-if="project.icon" :src="'src/media/' + project.icon" />
+          <img class="icon" :class="project.iconClass" v-if="project.icon" :src="'media/' + project.icon" />
           <h3>{{ project.title }}</h3>
         </div>
         <div class="technologies">
                     <img class="technology" v-for="tech in project.technologies.slice().reverse()" :title="tech" :alt="tech"
-                        :src="'src/media/technologies/' + data.iconsSrc[tech]" />
+                        :src="'media/technologies/' + data.iconsSrc[tech]" />
                 </div>
       </header>
       <div class="description">
