@@ -193,8 +193,9 @@ Not only is the LED Piano a fun and innovative way to play music, but it also of
 shortDescription: "A unique musical instrument that I created to display the notes being played on an digital LED strip.",
 //rewrite a short summary of the LED Piano based on the longDescription above
 summary: "The LED Piano is a modified digital piano that combines traditional music-making with modern technology. I created it by modifying a Yamaha CLP-745 digital piano and adding custom 3D-printed parts, as well as an ESP8266 microcontroller and LED lights. The microcontroller receives MIDI signals from the piano and communicates with a script that displays the corresponding notes on the LED strip, allowing the player to see the music they are creating in a visually stunning way. The LED Piano can be used for creative musical compositions and as a tool for learning sheet music, making it a unique and innovative way to play and learn about music.",
+images: ['led-piano/led-piano-insides.jpg'],
 customHtml: `
-<iframe id="ytplayer" type="text/html" width="100%" height="100%"
+<iframe id="ytplayer" type="text/html" width="100%" height="100%" style="aspect-ratio: 16 / 9;"
   src="https://youtube.com/embed/pJ7fCkMSCVU?autoplay=1"
   frameborder="0"/>`,
 technologies:['ESP8266','C++',"Fusion360","3D Printing"]},

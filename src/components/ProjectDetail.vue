@@ -25,9 +25,9 @@ export default {
   </div>
   <div class="projectDescription">
     <div class="images" v-if="project.images || project.customHtml">
+      <div style="width:100%;height:100%;" v-if="project.customHtml" v-html="project.customHtml"></div>
       <img v-for="image in project.images" :src="'media/' + image" alt="" class="topImage">
 
-      <div style="width:100%;height:100%;" v-html="project.customHtml"></div>
     </div>
     
     <div class="content">
