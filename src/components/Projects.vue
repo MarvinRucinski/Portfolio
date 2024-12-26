@@ -22,12 +22,14 @@ import data from './Data.vue'
 h2 {
     font-size: 27pt;
     margin-left: 22px;
+    font-weight: 500;
 }
 
 h3 {
     font-size: 15pt;
     margin-left: 22px;
     margin-top: 10px;
+    font-weight: 400;
 }
 
 .cards {

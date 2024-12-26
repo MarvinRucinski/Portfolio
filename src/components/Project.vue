@@ -3,15 +3,17 @@
 export default {
     props: {
         title: String,
+        subtitle: String,
         shortDescription: String,
         longDescription: String,
         technologies: Array,
         images: Array,
         icon: String,
         iconClass: String,
-        summary: String
+        summary: String,
+        customHtml: String,
+        links: Array
     }
-    
 }
 </script>
 <script setup>
@@ -19,13 +21,16 @@ import data from './Data.vue'
 </script>
 
 <template>
-    <router-link custom :to="'/' + title + '/details'" v-slot="{ navigate }" >
+    <router-link custom :to="'/' + title + '-' + subtitle + '/details'" v-slot="{ navigate }">
         <div :id="title" class="card" role="link" @click="navigate">
 
             <div class="header">
                 <header>
                     <img class="icon" :class="iconClass" v-if="icon" :src="'media/' + icon" />
-                    <h3>{{ title }}</h3>
+                    <div>
+                        <h3>{{ title }}</h3>
+                        <h4>{{ subtitle }}</h4>
+                    </div>
                 </header>
                 <div class="technologies">
                     <img class="technology" v-for="tech in technologies.slice().reverse()" :title="tech" :alt="tech"

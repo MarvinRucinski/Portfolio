@@ -9,6 +9,8 @@ import './assets/main.css'
 const routes = [
     { path: '/', component: Home },
     { path: '/:name/details', component: ProjectDetail },
+    { path: '/404', component: { template: '<h1 style="margin-top:20px;">404 Not Found</h1> <a href="/">Go home</a>' }, name: '404' },
+    { path: '/:pathMatch(.*)*', redirect: '/404' }
 ]
 
 // 3. Create the router instance and pass the `routes` option

@@ -6,11 +6,16 @@ import data from './Data.vue'
 <script>
 export default {
   data() {
-    const project = data.projects.find(projectGroup =>
-      (projectGroup.find(project => project.title == this.$route.params.name))
-    ).find(project => project.title == this.$route.params.name)
-    return {
-      project: project
+    try {
+      const project = data.projects.find(projectGroup =>
+        (projectGroup.find(project => project.title + '-' + project.subtitle == this.$route.params.name))
+      ).find(project => project.title + '-' + project.subtitle == this.$route.params.name)
+      return {
+        project: project
+      }
+    }
+    catch {
+      this.$router.push('/404')
     }
   },
   mounted() {
@@ -24,25 +29,39 @@ export default {
     <div class="arrow"></div>
   </div>
   <div class="projectDescription">
-    <div class="images" v-if="project.images || project.customHtml">
+    <div class="images" v-if="project.images.length || project.customHtml">
       <div style="width:100%;height:100%;" v-if="project.customHtml" v-html="project.customHtml"></div>
       <img v-for="image in project.images" :src="'media/' + image" alt="" class="topImage">
 
     </div>
-    
+
     <div class="content">
       <header>
         <div class="name">
           <img class="icon" :class="project.iconClass" v-if="project.icon" :src="'media/' + project.icon" />
-          <h3>{{ project.title }}</h3>
+          <div>
+            <h3>{{ project.title }}</h3>
+            <h4>{{ project.subtitle }}</h4>
+          </div>
         </div>
         <div class="technologies">
-                    <img class="technology" v-for="tech in project.technologies.slice().reverse()" :title="tech" :alt="tech"
-                        :src="'media/technologies/' + data.iconsSrc[tech]" />
-                </div>
+          <img class="technology" v-for="tech in project.technologies.slice().reverse()" :title="tech" :alt="tech"
+            :src="'media/technologies/' + data.iconsSrc[tech]" />
+        </div>
       </header>
       <div class="description">
-        <p class="shortDesription">{{ project.shortDescription }}</p>{{project.longDescription}}
+        <p class="shortDesription">{{ project.shortDescription }}</p>
+
+        <!-- links -->
+        <div v-if="project.links">
+          <div v-for="link in project.links">
+            <div class="link">
+              <a :href="link.url" target="_blank">{{ link.name }}</a>
+            </div>
+          </div>
+        </div>
+
+        <div v-html="project.longDescription"></div>
       </div>
     </div>
   </div>
@@ -110,17 +129,16 @@ header {
   width: 40px;
   height: 40px;
   border-radius: 40px;
-  margin-top:10px;
+  margin-top: 15px;
+  margin-left: 15px;
 
   rotate: 135deg;
-
 
   animation: float 1s infinite alternate-reverse;
   animation-timing-function: ease-in-out;
 
-  transition: background-color .3s;
-
-  /* position: absolute; */
+  transition: background-color .2s;
+  cursor: pointer;
 }
 
 .back-link:hover {
@@ -162,5 +180,27 @@ h3 {
 .description {
   font-size: 14pt;
   white-space: pre-wrap;
+}
+a {
+  color: white;
+  background-color: rgb(0, 151, 189);
+  padding: 9px 18px;
+  border-radius: 7px;
+  font-weight: 600;
+  font-size: 14pt;
+  line-height: 14pt;
+}
+a:hover {
+  background-color: rgb(0, 114, 145);
+}
+.link {
+  display: inline-block;
+  margin-bottom: 10px;
+  margin-top: 5px;
+}
+</style>
+<style>
+b {
+  font-weight: bold;
 }
 </style>

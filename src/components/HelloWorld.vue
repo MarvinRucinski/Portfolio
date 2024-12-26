@@ -3,7 +3,34 @@ import iconsSrc from './Data.vue'
 export default {
   data() {
     return {
-      icons: ['Python', 'Django', 'Flask', 'Swift', 'PHP', 'HTML5', 'CSS3', 'JavaScript', 'JQuery', 'React', 'Vue', 'MySQL', 'C++', 'AdobeXD', 'Figma'],
+      icons: {
+        workingWith: {
+          name: "I'm currently working with",
+          icons: ['Python', 'Django', 'Vue', 'HTML5', 'CSS3', 'JavaScript', 'Postgres', 'Git', 'Tailwind', 'Figma', 'Firebase', 'Docker', 'MacOS', 'Linux', 'GNU Bash', 'VS Code'],
+        },
+        learning: {
+          name: "I'm currently learning",
+          icons: ['PyTorch', 'TensorFlow'],
+        },
+        // pastExperience: {
+        //   name: "I've worked with",
+        //   icons: ['Swift', 'PHP', 'TypeScript', 'Flask', 'JQuery', 'React', 'MySQL', 'MongoDB', 'C++', 'AdobeXD', 'Vite', 'Arduino', 'RPi', 'XCode'],
+        // },
+      },
+      socials: {
+        linkedin: {
+          name: 'LinkedIn',
+          link: 'https://www.linkedin.com/in/marvin-rucinski/',
+        },
+        github: {
+          name: 'GitHub',
+          link: 'https://www.github.com/MarvinRucinski',
+        },
+        stackoverflow: {
+          name: 'StackOverflow',
+          link: 'https://www.stackoverflow.com/users/10039005/marvin-ruciński',
+        },
+      },
       iconsSrc: iconsSrc.iconsSrc
     }
   },
@@ -19,12 +46,26 @@ export default {
 <template>
   <div class="greetings">
     <h1 class="">Hi,</h1>
-    <h1 class="">I'm <span class="blue">Marvin</span></h1>
-    <p class="icons"> 
-      <!-- TODO add icon description on hover -->
-      <a rel="noreferrer" v-for="tech in icons"><img :src="'media/technologies/'+iconsSrc[tech]" width="36" height="36" :alt="tech" :title="tech" /></a> 
+    <h1 class="">I'm <span class="blue">Marvin</span> <span style="display: none;">Ruciński</span></h1>
 
-    </p> 
+    <!-- socials -->
+    <div class="section">
+      <h3>Find me on</h3>
+      <p class="icons">
+        <a rel="noreferrer" v-for="social in socials" :href="social.link" target="_blank" :title="social.name"><img
+            :src="'media/technologies/' + iconsSrc[social.name]" width="36" height="36" :alt="social.name" :title="social.name" /></a>
+      </p>
+    </div>
+
+    <!-- skills -->
+    <div v-for="section in icons" class="section">
+      <h3>{{section.name}}</h3>
+      <p class="icons">
+        <a rel="noreferrer" v-for="tech in section.icons"><img :src="'media/technologies/'+iconsSrc[tech]" width="36"
+            height="36" :alt="tech" :title="tech" /></a>
+      </p>
+    </div>
+
     <!-- TODO add social media (github, stackoverflow, ...) -->
     <div class="arrow-circle" @click="scrollToNextSection">
       <!-- TODO add link to next section -->
@@ -55,13 +96,13 @@ h3 {
   margin: 2px;
 }
 .icons {
-  margin-bottom: 100px;
+  margin-bottom: 10px;
 }
 .arrow {
   width: 20px;
   height: 20px;
-  border-right: 2px solid var(--color-border);
-  border-bottom: 2px solid var(--color-border);
+  border-right: 2px solid var(--color-border-hover);
+  border-bottom: 2px solid var(--color-border-hover);
   margin-top: 12px;
   margin-left: 12px;
 }
@@ -91,5 +132,6 @@ h3 {
 .arrow-circle:hover {
   background-color: var(--color-background-soft);
 }
+
 
 </style>
