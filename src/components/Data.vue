@@ -66,6 +66,7 @@ export default {
       // dyżury.app
       // miglator
       // linia
+      // wms
 
 
 
@@ -92,8 +93,10 @@ The application was initially developed as a Progressive Web App (PWA) using web
 
 The development process included detailed planning and implementation of both frontend and backend components, with a focus on creating a seamless user experience. Extensive end-to-end (E2E) testing was conducted to ensure the reliability and functionality of the app. The successful deployment and practical use of the application at Wrocław University of Technology camps have demonstrated its value as an indispensable tool for camp organization.
 
-Additionally, this application was used as my engineering thesis project, showcasing my ability to develop and deploy a fully functional and impactful software solution.`,
-        images: [],
+Additionally, this application was used as my engineering thesis project, showcasing my ability to develop and deploy a fully functional and impactful software solution.
+
+A new feature added to the app this year is the "Camp Tinder," which allows participants to connect with each other, fostering a sense of community and making it easier for attendees to meet new people and form friendships during the camp.`,
+        images: ['oboz-studentow-pwr/lato-2024/home.png', 'oboz-studentow-pwr/lato-2024/profil1.png', 'oboz-studentow-pwr/lato-2024/post1.jpg', 'oboz-studentow-pwr/lato-2024/post2.jpg'],
         technologies: ['Vue', 'HTML5', 'JavaScript', 'CSS3', 'Python', 'Django', 'Docker', 'Firebase'],
         links: [{
           "name": "Camp Website",
@@ -117,7 +120,7 @@ For the Winter 2024 camp, the application has been updated with a new visual ide
 The application was developed using web technologies to create a Progressive Web App (PWA), ensuring accessibility across different devices and platforms. The development process included detailed planning and implementation of both frontend and backend components, with a focus on creating a seamless user experience.
 
 Extensive end-to-end (E2E) testing was conducted to ensure the reliability and functionality of the app. The successful deployment and practical use of the application at Wrocław University of Technology camps have demonstrated its value as an indispensable tool for camp organization.`,
-        images: [],
+        images: ['oboz-studentow-pwr/zima-2024/post.jpg'],
         technologies: ['Vue', 'HTML5', 'JavaScript', 'CSS3', 'Python', 'Django', 'Docker', 'Firebase']
       },
       {
@@ -134,7 +137,7 @@ Participants benefit from quick access to essential information such as event sc
 The application was developed using web technologies to create a Progressive Web App (PWA), ensuring accessibility across different devices and platforms. The development process included detailed planning and implementation of both frontend and backend components, with a focus on creating a seamless user experience.
 
 Extensive end-to-end (E2E) testing was conducted to ensure the reliability and functionality of the app. The successful deployment and practical use of the application at Wrocław University of Technology camps have demonstrated its value as an indispensable tool for camp organization.`,
-        images: [],
+        images: ['oboz-studentow-pwr/lato-2023/post.jpg'],
         technologies: ['Vue', 'HTML5', 'JavaScript', 'CSS3', 'Python', 'Django', 'Docker', 'Firebase']
       },
 

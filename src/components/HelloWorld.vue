@@ -53,7 +53,8 @@ export default {
       <h3>Find me on</h3>
       <p class="icons">
         <a rel="noreferrer" v-for="social in socials" :href="social.link" target="_blank" :title="social.name"><img
-            :src="'media/technologies/' + iconsSrc[social.name]" width="36" height="36" :alt="social.name" :title="social.name" /></a>
+            :src="'media/technologies/' + iconsSrc[social.name]" class="tech"  :alt="social.name"
+            :title="social.name" /></a>
       </p>
     </div>
 
@@ -61,7 +62,8 @@ export default {
     <div v-for="section in icons" class="section">
       <h3>{{section.name}}</h3>
       <p class="icons">
-        <a rel="noreferrer" v-for="tech in section.icons"><img :src="'media/technologies/'+iconsSrc[tech]" class="tech" :alt="tech" :title="tech" /></a>
+        <a rel="noreferrer" v-for="tech in section.icons"><img :src="'media/technologies/'+iconsSrc[tech]" class="tech"
+            :alt="tech" :title="tech" /></a>
       </p>
     </div>
 
