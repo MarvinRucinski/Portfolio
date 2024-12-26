@@ -58,16 +58,109 @@ export default {
     // 3x3 cube?
     // temperature monitoring and graphing app?
     // home server?
+    // bitehack styczen 2024
 
 
     //== Current
     [
 
-      // dyżury.app
-      // miglator
-      // linia
-      // wms
+    {
+      title: "Duties.app (Dyżury.app)",
+      icon: "dyzury-app/logo.png",
+      iconClass: "app",
+      shortDescription: "A web app that allows roommates to track and assign cleaning duties.",
+      longDescription: `🚀 I'm excited to share the result of my work – the Duties App! 🏠📲
 
+This tool was created for people who share a space with others and want to maintain order without unnecessary stress. The app is especially useful for students renting apartments by the room, where it's easy to get confused about household chores.
+
+With the Duties App, cleaning together is much simpler:
+
+✅ Create and assign duties for individual rooms or the entire apartment
+✅ Automatic notifications about upcoming duties
+✅ Ready-made task lists and easy assignment of responsibilities to roommates
+✅ Clear history of completed tasks – all in one place
+
+Working on the app was a big challenge, but I'm proud of the results and hope that the Duties App will prove to be a practical solution for many users. I'm looking forward to feedback and ideas from everyone who would like to test it!`,
+      images: ['dyzury-app/ss.png'],
+      technologies: ['Vue', 'HTML5', 'JavaScript', 'CSS3', 'Python', 'Django', 'Docker'],
+      links: [{
+        "name": "Website",
+        "url": "https://dyzury.app"
+      },
+        {
+          "name": "AppStore",
+          "url": "https://apps.apple.com/pl/app/dyżury-app/id6502833411"
+        },
+        {
+          "name": "Google Play",
+          "url": "https://play.google.com/store/apps/details?id=app.dyzury"
+        }
+      ]
+    },
+
+      {
+        title: "Miglator",
+        // icon: "miglator/logo.png",
+        shortDescription: "An innovative solution that bridges communication gaps for people who are deaf or hard of hearing.",
+        longDescription: `🎉 1st place at the VII edition of Bitehack! 🎉
+
+I’m incredibly proud to be part of the winning team alongside Franciszek Radziwolski, Jakub Wasilewski, and Kacper Członka! Representing our SNS Automatyk science club at this year’s Bitehack, we tackled the challenge under the theme “Become a Hero” 🦸‍♂️.
+
+🚀 What did we create?
+We developed “Miglator” – an innovative solution that bridges communication gaps for people who are deaf or hard of hearing. 🧠
+
+🔹 The system uses a camera and a neural network to recognize sign language and display it as a text message.
+🔹 It works the other way around, too – a microphone recognizes speech and converts it into text visible to the deaf user.
+
+We had only 24 hours to turn this idea into a working project, and we did it! 1st place is a testament to our teamwork, creativity, and determination. 🏆👏
+
+A huge thank you to Politechnika Wrocławska for the support and to my teammates for an unforgettable experience!
+
+We are currently working on further developing the project to enhance its capabilities and make it more accessible to a wider audience.`,
+        images: ['miglator/img.jpeg', 'miglator/img2.jpeg'],
+        technologies: ['Python', 'TensorFlow', 'PyTorch', 'RPi', '3D Printing', 'Fusion360'],
+        links: [{
+          "name": "Demo",
+          "url": "https://fb.watch/wJmfs1lx-j/"
+        }]
+      },
+
+
+      {
+        title: "WMS System",
+        icon: "masterche-logoplaste/logo.png",
+        shortDescription: "A Warehouse Management System (WMS) developed for Masterche Logoplaste.",
+        longDescription: `As part of my work at Masterche Logoplaste, I am developing a comprehensive Warehouse Management System (WMS) to streamline and optimize warehouse operations. 
+
+The system is designed to improve efficiency, reduce errors, and provide better visibility into warehouse operations. By leveraging Django's robust framework, the WMS offers a responsive and user-friendly interface that meets the needs of warehouse staff and management.`,
+        // images: ['masterche-logoplaste/wms-dashboard.png'],
+        technologies: ['Django', 'HTML5', 'CSS3', "JavaScript", 'Tailwind']
+      },
+
+      {
+        title: "Juwenalia 2025 App",
+        shortDescription: "An exciting new app developed in collaboration with the Solvro scientific association for the Juwenalia 2025 event.",
+        longDescription: "I'm thrilled to announce that I'm working on a new app in collaboration with the Solvro scientific association at Wrocław University of Technology for the Juwenalia #wrocławrazem 2025 event. While we can't reveal any specific details just yet, we can assure you that this app will bring a unique and engaging experience to the event. Stay tuned for more updates as we get closer to the launch date!",
+        // images: [],
+        technologies: ["JavaScript", "HTML5", "CSS3"]
+      },
+
+      {
+        title: "Process Line Project",
+        icon: "automatyk/logo.jpg",
+        shortDescription: "A miniature conveyor line with conveyor belts, a vision system, and detail sorting.",
+        longDescription: `The Conveyor Line Project is an ambitious initiative undertaken by the SNS Automatyk scientific association, where I currently serve as the project leader. The primary goal of this project is to develop a miniature conveyor line equipped with conveyor belts, a vision system, and a detail sorting mechanism.
+
+The conveyor line is designed to simulate real-world industrial processes on a smaller scale, providing valuable hands-on experience in automation and control systems. The project involves the integration of various components, including:
+
+<b>Conveyor Belts</b>: These are used to transport items along the line, mimicking the movement of goods in a manufacturing environment.
+<b>Vision System</b>: This system utilizes cameras and image processing algorithms to identify and classify items on the conveyor belt. It plays a crucial role in ensuring that items are correctly sorted based on predefined criteria.
+<b>Detail Sorting Mechanism</b>: Once the vision system identifies the items, the sorting mechanism directs them to the appropriate bins or sections. This process is automated to ensure efficiency and accuracy.
+
+As the project leader, I am responsible for overseeing the development and integration of these components, ensuring that the system operates seamlessly. The Conveyor Line Project not only provides practical experience in automation but also serves as a valuable educational tool for members of the SNS Automatyk association, helping them to develop skills in robotics, programming, and system integration.`,
+        // images: ["automatyk/conveyor-line.jpg"],
+        technologies: ["Python", "RPi", "Fusion360", "3D Printing"]
+      },
 
 
     ],
@@ -75,9 +168,56 @@ export default {
 
     //== Completed Projects ==//
     [
-      // kolimator 
-      // bitehack styczen
-      // hackyeah
+      // kolimator  https://github.com/MarvinRucinski/kolimator_project
+      {
+        "title": "CTS - Comarch Targeting System",
+        "icon": "cts/Comarch_Logo.png",
+        "shortDescription": "A computer-assisted electronic sighting system developed in collaboration with Comarch.",
+        "longDescription": `A shared success with pride on the podium! 🏆
+
+A project that started as an ambitious idea has transformed into a working prototype and won 2nd place at the Team Projects Conference organized by Wrocław University of Science and Technology. Together with the team, we created CTS – a computer-assisted electronic sighting system that has the potential to revolutionize the collimator market in Poland.
+
+This recognition is the result of hard work, commitment, and great collaboration from the entire team:
+🔹 Jakub Wasilewski
+🔹 Piotr Gabrysch
+🔹 Franciszek Radziwolski
+🔹 Marvin Ruciński
+
+Our solution allows for dynamic correction of the aiming mark, taking into account key weapon and ammunition parameters. We proved that it is possible to create a solid and functional system for a fraction of the market price of premium-class collimators.
+
+I want to thank the team for the collaborative effort, Mateusz Żurawski for his mentoring, and Comarch for supporting this event and us – young innovators! 🚀`,
+        "images": ["cts/img1.jpeg", "cts/img2.jpeg", "cts/img3.jpeg", 'cts/render.png', 'cts/app.png'],
+        "technologies": ["Python", "RPi", "3D Printing", 'Fusion360'],
+        "links": [{
+          "name": "Blog Post",
+          "url": "https://pwr.edu.pl/uczelnia/aktualnosci/studenckie-projekty-na-zamowienie-znamy-zwyciezcow-13386.html"
+        }]
+      },
+
+      {
+        "title": "eVote EU - HACKYeah",
+        "shortDescription": "An application designed to encourage young people to participate in the European Parliament elections.",
+        "longDescription": `Together with my colleagues, I had the opportunity to take part in HACKYeah – the largest stationary hackathon in Europe, held at Tauron Arena in Kraków. This event was a true mix of adrenaline, creativity, and technology – and we rose to the challenge!
+
+🌟 What did we create?
+
+Our goal was more than just coding. In 24 hours, we designed an application aimed at encouraging young people to participate in the European Parliament elections. We wanted to show that voting matters and that every vote counts.
+
+🏆 Finalist title!
+
+Despite tough competition, our project was recognized, and we earned the title of finalists! This is a great honor for us and proof that our work has real value.
+
+🎉 Why is HACKYeah so special?
+
+This hackathon is not just about coding – it’s about incredible energy, idea exchange, and teamwork at the highest level. The time pressure, brainstorming, and pushing past our own limits made these 24 hours truly unforgettable.`,
+        "images": ["hackyeah/ss.png", "hackyeah/img.jpeg"],
+        "technologies": ["Figma", 'React'],
+        // "links": [{
+        //   "name": "Event Website",
+        //   "url": "https://hackyeah.pl"
+        // }]
+      },
+
       {
         title: "The Student Camp App",
         subtitle: "Summer 2024",
@@ -144,7 +284,7 @@ Extensive end-to-end (E2E) testing was conducted to ensure the reliability and f
       {
         title: "Autonomous beverage dispenser", icon: "automatyk/logo.jpg", iconClass: "",
         shortDescription: "A robot that uses a vision system to locate and fill cups with beverages.",
-        longDescription: `The Autonomous Beverage Dispenser is a remarkable student project developed as part of the SNS Automatyk science club at Wrocław University of Science and Technology. This innovative robot is designed to automatically pour beverages such as water or juice into cups, utilizing a vision system for precise cup detection and positioning.
+        longDescription: `The Autonomous Beverage Dispenser is a remarkable student project developed as part of the SNS Automatyk science club at Wrocław University of Science and Technology. As the team leader, I guided the development of this innovative robot designed to automatically pour beverages such as water or juice into cups, utilizing a vision system for precise cup detection and positioning.
 
 Key Features:
 - <b>Vision System</b>: The dispenser uses a wide-angle camera and a trained neural network to detect red cups placed within the dispensing area. The system captures an image, crops it, and analyzes it to identify the cup positions with 99% accuracy.
@@ -160,7 +300,7 @@ This project exemplifies the combination of creativity, teamwork, and technologi
 <iframe id="ytplayer" type="text/html" width="100%" height="100%" style="aspect-ratio: 16 / 9;"
   src="https://www.youtube.com/embed/lKksrWtldNg?si=2vJPvVkhB6StjiuM"
   frameborder="0"/>`,
-        images: [],
+        images: ['automatyk/nalewak-warszawa.jpeg'],
         technologies: ['Fusion360', '3D Printing', 'Python'],
         links: [{
           "name": "Repository",
@@ -204,7 +344,11 @@ The Facebook Messenger Bot, used to send notifications about the plant's waterin
 
 In this way, the system for monitoring soil moisture in a plant pot, using a microcontroller, sensor, and notifications through Facebook Messenger Bot, becomes a complete and functional solution, enabling users to conveniently and effectively care for their plants.`,
         images: ['smart-plant-pot/home.png', 'smart-plant-pot/bot.png', 'smart-plant-pot/plot.png'],
-        technologies: ['ESP8266', 'Python', 'Django', 'MySQL', 'HTML5', 'JavaScript', 'CSS3', 'OpenAI']
+        technologies: ['ESP8266', 'Python', 'Django', 'MySQL', 'HTML5', 'JavaScript', 'CSS3', 'OpenAI'],
+        links: [{
+          "name": "Repository",
+          "url": "https://github.com/MarvinRucinski/smart_plant_pot"
+        }]
 
       },
 
@@ -338,7 +482,6 @@ Through this project, I was able to showcase my work and demonstrate my skills a
 
 
 
-      // TODO: add video and photos
       {
         title: "LED Piano", icon: "led-piano/piano-top-view-svgrepo-com.svg",
         //Write a description of the LED Piano project, piano: modified Yamaha CLP-745, controller: ESP8266, 3D printed parts are used
@@ -354,7 +497,11 @@ Not only is the LED Piano a fun and innovative way to play music, but it also of
 <iframe id="ytplayer" type="text/html" width="100%" height="100%" style="aspect-ratio: 16 / 9;"
   src="https://youtube.com/embed/pJ7fCkMSCVU?autoplay=1"
   frameborder="0"/>`,
-        technologies: ['ESP8266', 'C++', "Fusion360", "3D Printing"]
+        technologies: ['ESP8266', 'C++', "Fusion360", "3D Printing"],
+        links: [{
+          "name": "Repository",
+          "url": "https://github.com/MarvinRucinski/PianoLED"
+        }]
       },
 
 
@@ -506,7 +653,11 @@ Overall, this project is a great example of my skills and capabilities as a make
 
 At MatMar, we specialize in creating captivating games using Scratch, a visual programming language that allowed us to bring our imaginations to life. Through countless hours of dedication and experimentation, we honed our skills in game design, storytelling, and coding to deliver unique gaming experiences.`,
         images: ['matmar/webss.png'],
-        technologies: []
+        technologies: [],
+        links: [{
+          "name": "Website",
+          "url": "https://matmar.mystrikingly.com"
+        }]
       },
 
 

@@ -30,7 +30,7 @@ export default {
   </div>
   <div class="projectDescription">
 
-    <div class="images" v-if="project.images.length || project.customHtml">
+    <div class="images" v-if="(project.images && project.images.length) || project.customHtml">
       <div style="width:100%;height:100%;" v-if="project.customHtml" v-html="project.customHtml"></div>
       <img v-for="image in project.images" :src="'media/' + image" alt="" class="topImage">
     </div>
@@ -53,12 +53,10 @@ export default {
         <p class="shortDesription">{{ project.shortDescription }}</p>
 
         <!-- links -->
-        <div v-if="project.links">
-          <div v-for="link in project.links">
-            <div class="link">
+        <div v-if="project.links" class="links">
+            <div class="link" v-for="link in project.links">
               <a :href="link.url" target="_blank">{{ link.name }}</a>
             </div>
-          </div>
         </div>
 
         <div class="longDescription" v-html="project.longDescription"></div>
@@ -92,8 +90,9 @@ header {
     max-width: 75px;
     object-fit: contain;
 }
+
 .images {
-  min-width: 50%; 
+  width: 50%; 
   /* max-height: 100vh; */
   flex-shrink: 0;
   display: flex;
@@ -194,6 +193,11 @@ a {
 a:hover {
   background-color: rgb(0, 114, 145);
 }
+.links {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
 .link {
   display: inline-block;
   margin-bottom: 10px;
@@ -217,6 +221,9 @@ a:hover {
   .shortDesription {
     font-size: 12pt;
   }
+  .images {
+    width: auto;
+  }
   a {
     font-size: 12pt;
     padding: 7px 14px;
@@ -233,8 +240,7 @@ a:hover {
     /* display: flex; */
     flex-direction: column-reverse;
   }
-}
-</style>
+}</style>
 <style>
 b {
   font-weight: bold;
