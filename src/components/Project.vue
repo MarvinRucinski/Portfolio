@@ -91,7 +91,7 @@ import data from './Data.vue'
 
 .card .icon.app {
     background-color: white;
-    border-radius: 15px;
+    border-radius: 25%;
 }
 
 .card .icon.shadow {
@@ -111,11 +111,12 @@ import data from './Data.vue'
     gap: 5px;
     flex-wrap: wrap-reverse;
     flex-direction: row-reverse;
+    max-width: 40%;
 }
 
 .card .technology {
     height: 30px;
-    max-width: 60px;
+    max-width: 75px;
     object-fit: contain;
 }
 
@@ -128,5 +129,26 @@ import data from './Data.vue'
 a {
     text-decoration: none;
     color: var(--color-text);
+}
+@media screen and (max-width: 500px) {
+    .card .icon {
+        width: 40px;
+    }
+    .card h3 {
+        font-size: 12pt;
+        font-weight: 600;
+    }
+    .card h4 {
+        font-size: 10pt;
+        font-weight: 500;
+    }
+    .card p.shortDescription {
+        font-size: 10pt;
+        font-weight: 500;
+    }
+    .card .technology {
+        height: 20px;
+        max-width: 50px;
+    }
 }
 </style>

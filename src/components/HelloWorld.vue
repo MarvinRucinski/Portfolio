@@ -61,8 +61,7 @@ export default {
     <div v-for="section in icons" class="section">
       <h3>{{section.name}}</h3>
       <p class="icons">
-        <a rel="noreferrer" v-for="tech in section.icons"><img :src="'media/technologies/'+iconsSrc[tech]" width="36"
-            height="36" :alt="tech" :title="tech" /></a>
+        <a rel="noreferrer" v-for="tech in section.icons"><img :src="'media/technologies/'+iconsSrc[tech]" class="tech" :alt="tech" :title="tech" /></a>
       </p>
     </div>
 
@@ -133,5 +132,29 @@ h3 {
   background-color: var(--color-background-soft);
 }
 
+.tech {
+  width: 36px;
+  height: 36px;
+}
+@media screen and (max-width: 500px) {
+  h1, h1>span {
+    font-size: 15vmin;
+  }
+  .arrow-circle {
+    width: 40px;
+    height: 40px;
+  }
+  .arrow {
+    width: 15px;
+    height: 15px;
+    margin-top: 10.5px;
+    margin-left: 10.5px;
+  }
+  .tech {
+    width: 24px;
+    height: 24px;
+  }
+  
+}
 
 </style>

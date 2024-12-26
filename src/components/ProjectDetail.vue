@@ -29,10 +29,10 @@ export default {
     <div class="arrow"></div>
   </div>
   <div class="projectDescription">
+
     <div class="images" v-if="project.images.length || project.customHtml">
       <div style="width:100%;height:100%;" v-if="project.customHtml" v-html="project.customHtml"></div>
       <img v-for="image in project.images" :src="'media/' + image" alt="" class="topImage">
-
     </div>
 
     <div class="content">
@@ -61,9 +61,10 @@ export default {
           </div>
         </div>
 
-        <div v-html="project.longDescription"></div>
+        <div class="longDescription" v-html="project.longDescription"></div>
       </div>
     </div>
+
   </div>
 </template>
 
@@ -88,11 +89,11 @@ header {
 }
 .technologies .technology {
     height: 30px;
-    max-width: 60px;
+    max-width: 75px;
     object-fit: contain;
 }
 .images {
-  width: 50%; 
+  min-width: 50%; 
   /* max-height: 100vh; */
   flex-shrink: 0;
   display: flex;
@@ -197,6 +198,41 @@ a:hover {
   display: inline-block;
   margin-bottom: 10px;
   margin-top: 5px;
+}
+.projectDescription {
+  display: flex;
+  flex-direction: row;
+}
+
+@media screen and (max-width: 750px) {
+  header {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+  .technologies .technology {
+    height: 25px;
+    max-width: 62.5px;
+  }
+  .shortDesription {
+    font-size: 12pt;
+  }
+  a {
+    font-size: 12pt;
+    padding: 7px 14px;
+  }
+  .link {
+    margin-bottom: 8px;
+    margin-top: 0px;
+  }
+  .description {
+    font-size: 12pt;
+  }
+  .projectDescription {
+    padding: 10px;
+    /* display: flex; */
+    flex-direction: column-reverse;
+  }
 }
 </style>
 <style>
