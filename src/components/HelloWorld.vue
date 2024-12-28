@@ -6,7 +6,7 @@ export default {
       icons: {
         workingWith: {
           name: "I'm currently working with",
-          icons: ['Python', 'Django', 'Vue', 'HTML5', 'CSS3', 'JavaScript', 'Postgres', 'Git', 'Tailwind', 'Figma', 'Firebase', 'Docker', 'MacOS', 'Linux', 'GNU Bash', 'VS Code'],
+          icons: ['Python', 'Django', 'Vue', 'Capacitor', 'HTML5', 'CSS3', 'JavaScript', 'Postgres', 'Git', 'Tailwind', 'Figma', 'Firebase', 'Docker', 'MacOS', 'Linux', 'GNU Bash', 'VS Code'],
         },
         learning: {
           name: "I'm currently learning",

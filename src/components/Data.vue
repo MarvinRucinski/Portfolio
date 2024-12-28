@@ -50,6 +50,7 @@ export default {
     "GitHub": "github.svg",
     "LinkedIn": "linkedin.svg",
     "StackOverflow": "stackoverflow.svg",
+    "Capacitor": "capacitor-js.svg",
   },
 
   projects: [
@@ -78,11 +79,9 @@ With the Duties App, cleaning together is much simpler:
 ✅ Create and assign duties for individual rooms or the entire apartment
 ✅ Automatic notifications about upcoming duties
 ✅ Ready-made task lists and easy assignment of responsibilities to roommates
-✅ Clear history of completed tasks – all in one place
-
-Working on the app was a big challenge, but I'm proud of the results and hope that the Duties App will prove to be a practical solution for many users. I'm looking forward to feedback and ideas from everyone who would like to test it!`,
+✅ Clear history of completed tasks – all in one place`,
       images: ['dyzury-app/ss.png'],
-      technologies: ['Vue', 'HTML5', 'JavaScript', 'CSS3', 'Python', 'Django', 'Docker'],
+        technologies: ['Capacitor', 'Vue', 'HTML5', 'JavaScript', 'CSS3', 'Python', 'Django', 'Docker'],
       links: [{
         "name": "Website",
         "url": "https://dyzury.app"
@@ -99,12 +98,12 @@ Working on the app was a big challenge, but I'm proud of the results and hope th
     },
 
       {
-        title: "Miglator",
+        title: "Miglator - sign language translator",
         // icon: "miglator/logo.png",
         shortDescription: "An innovative solution that bridges communication gaps for people who are deaf or hard of hearing.",
         longDescription: `🎉 1st place at the VII edition of Bitehack! 🎉
 
-I’m incredibly proud to be part of the winning team alongside Franciszek Radziwolski, Jakub Wasilewski, and Kacper Członka! Representing our SNS Automatyk science club at this year’s Bitehack, we tackled the challenge under the theme “Become a Hero” 🦸‍♂️.
+I’m incredibly proud to be part of the winning team alongside Franciszek Radziwolski, Jakub Wasilewski, and Kacper Członka! Representing our SNS Automatyk science club at the VII edition of Bitehack, we tackled the challenge under the theme “Become a Hero” 🦸‍♂️.
 
 🚀 What did we create?
 We developed “Miglator” – an innovative solution that bridges communication gaps for people who are deaf or hard of hearing. 🧠
@@ -129,8 +128,8 @@ We are currently working on further developing the project to enhance its capabi
       {
         title: "WMS System",
         icon: "masterche-logoplaste/logo.png",
-        shortDescription: "A Warehouse Management System (WMS) developed for Masterche Logoplaste.",
-        longDescription: `As part of my work at Masterche Logoplaste, I am developing a comprehensive Warehouse Management System (WMS) to streamline and optimize warehouse operations. 
+        shortDescription: "A Warehouse Management System (WMS) developed for Masterchem Logoplaste.",
+        longDescription: `As part of my work at Masterchem Logoplaste, I am developing a comprehensive Warehouse Management System (WMS) to streamline and optimize warehouse operations. 
 
 The system is designed to improve efficiency, reduce errors, and provide better visibility into warehouse operations. By leveraging Django's robust framework, the WMS offers a responsive and user-friendly interface that meets the needs of warehouse staff and management.`,
         // images: ['masterche-logoplaste/wms-dashboard.png'],
@@ -149,7 +148,7 @@ The system is designed to improve efficiency, reduce errors, and provide better 
         title: "Process Line Project",
         icon: "automatyk/logo.jpg",
         shortDescription: "A miniature conveyor line with conveyor belts, a vision system, and detail sorting.",
-        longDescription: `The Conveyor Line Project is an ambitious initiative undertaken by the SNS Automatyk scientific association, where I currently serve as the project leader. The primary goal of this project is to develop a miniature conveyor line equipped with conveyor belts, a vision system, and a detail sorting mechanism.
+        longDescription: `The Process Line Project is an ambitious initiative undertaken by the SNS Automatyk scientific association, where I currently serve as the project leader. The primary goal of this project is to develop a miniature conveyor line equipped with conveyor belts, a vision system, and a detail sorting mechanism.
 
 The conveyor line is designed to simulate real-world industrial processes on a smaller scale, providing valuable hands-on experience in automation and control systems. The project involves the integration of various components, including:
 
@@ -157,7 +156,7 @@ The conveyor line is designed to simulate real-world industrial processes on a s
 <b>Vision System</b>: This system utilizes cameras and image processing algorithms to identify and classify items on the conveyor belt. It plays a crucial role in ensuring that items are correctly sorted based on predefined criteria.
 <b>Detail Sorting Mechanism</b>: Once the vision system identifies the items, the sorting mechanism directs them to the appropriate bins or sections. This process is automated to ensure efficiency and accuracy.
 
-As the project leader, I am responsible for overseeing the development and integration of these components, ensuring that the system operates seamlessly. The Conveyor Line Project not only provides practical experience in automation but also serves as a valuable educational tool for members of the SNS Automatyk association, helping them to develop skills in robotics, programming, and system integration.`,
+As the project leader, I am responsible for overseeing the development and integration of these components, ensuring that the system operates seamlessly. The Process Line Project not only provides practical experience in automation but also serves as a valuable educational tool for members of the SNS Automatyk association, helping them to develop skills in robotics, programming, and system integration.`,
         // images: ["automatyk/conveyor-line.jpg"],
         technologies: ["Python", "RPi", "Fusion360", "3D Printing"]
       },
@@ -175,7 +174,7 @@ As the project leader, I am responsible for overseeing the development and integ
         "shortDescription": "A computer-assisted electronic sighting system developed in collaboration with Comarch.",
         "longDescription": `A shared success with pride on the podium! 🏆
 
-A project that started as an ambitious idea has transformed into a working prototype and won 2nd place at the Team Projects Conference organized by Wrocław University of Science and Technology. Together with the team, we created CTS – a computer-assisted electronic sighting system that has the potential to revolutionize the collimator market in Poland.
+A project that started as an ambitious idea has transformed into a working prototype and won 2nd place at the Team Projects Conference organized by Wrocław University of Science and Technology. Together with the team, we created a computer-assisted electronic sighting system that has the potential to revolutionize the collimator market in Poland.
 
 This recognition is the result of hard work, commitment, and great collaboration from the entire team:
 🔹 Jakub Wasilewski
@@ -183,11 +182,11 @@ This recognition is the result of hard work, commitment, and great collaboration
 🔹 Franciszek Radziwolski
 🔹 Marvin Ruciński
 
-Our solution allows for dynamic correction of the aiming mark, taking into account key weapon and ammunition parameters. We proved that it is possible to create a solid and functional system for a fraction of the market price of premium-class collimators.
+Our solution allows for dynamic correction of the aiming mark, taking into account key weapon and ammunition parameters, as well as the distance to the target. We proved that it is possible to create a solid and functional system for a fraction of the market price of premium-class collimators.
 
 I want to thank the team for the collaborative effort, Mateusz Żurawski for his mentoring, and Comarch for supporting this event and us – young innovators! 🚀`,
         "images": ["cts/img1.jpeg", "cts/img2.jpeg", "cts/img3.jpeg", 'cts/render.png', 'cts/app.png'],
-        "technologies": ["Python", "RPi", "3D Printing", 'Fusion360'],
+        "technologies": ["Python", "RPi", "3D Printing", 'Fusion360', 'Django'],
         "links": [{
           "name": "Blog Post",
           "url": "https://pwr.edu.pl/uczelnia/aktualnosci/studenckie-projekty-na-zamowienie-znamy-zwyciezcow-13386.html"
@@ -205,11 +204,7 @@ Our goal was more than just coding. In 24 hours, we designed an application aime
 
 🏆 Finalist title!
 
-Despite tough competition, our project was recognized, and we earned the title of finalists! This is a great honor for us and proof that our work has real value.
-
-🎉 Why is HACKYeah so special?
-
-This hackathon is not just about coding – it’s about incredible energy, idea exchange, and teamwork at the highest level. The time pressure, brainstorming, and pushing past our own limits made these 24 hours truly unforgettable.`,
+Despite tough competition, our project was recognized, and we earned the title of finalists! This is a great honor for us and proof that our work has real value.`,
         "images": ["hackyeah/ss.png", "hackyeah/img.jpeg"],
         "technologies": ["Figma", 'React'],
         // "links": [{
@@ -236,8 +231,9 @@ The development process included detailed planning and implementation of both fr
 Additionally, this application was used as my engineering thesis project, showcasing my ability to develop and deploy a fully functional and impactful software solution.
 
 A new feature added to the app this year is the "Camp Tinder," which allows participants to connect with each other, fostering a sense of community and making it easier for attendees to meet new people and form friendships during the camp.`,
-        images: ['oboz-studentow-pwr/lato-2024/home.png', 'oboz-studentow-pwr/lato-2024/profil1.png', 'oboz-studentow-pwr/lato-2024/post1.jpg', 'oboz-studentow-pwr/lato-2024/post2.jpg'],
-        technologies: ['Vue', 'HTML5', 'JavaScript', 'CSS3', 'Python', 'Django', 'Docker', 'Firebase'],
+        images: [//'oboz-studentow-pwr/lato-2024/home.png', 'oboz-studentow-pwr/lato-2024/profil1.png',
+          'oboz-studentow-pwr/lato-2024/post1.jpg', 'oboz-studentow-pwr/lato-2024/post2.jpg'],
+        technologies: ['Capacitor', 'Vue', 'HTML5', 'JavaScript', 'CSS3', 'Python', 'Django', 'Docker', 'Firebase'],
         links: [{
           "name": "Camp Website",
           "url": "https://oboz.samorzad.pwr.edu.pl"
@@ -292,8 +288,8 @@ Key Features:
 - <b>Efficiency</b>: After pouring, the dispenser performs quick movements to shake off any remaining drops from the nozzle before moving to the next cup or returning to the start position.
 
 Achievements:
-- 2nd place for the best booth promoting student activity during DAS 2024.
-- Finalist in the 10th edition of the Student Construction Competition (KoKos) in the Smart Robots category.
+- 🥈 2nd place for the best booth promoting student activity during DAS 2024.
+- 🏅 Finalist in the 10th edition of the Student Construction Competition (KoKos) in the Smart Robots category.
 
 This project exemplifies the combination of creativity, teamwork, and technological innovation, demonstrating the potential of student-led initiatives.`,
         customHtml: `
