@@ -32,7 +32,7 @@ export default {
 
     <div class="images" v-if="(project.images && project.images.length) || project.customHtml">
       <div style="width:100%;height:100%;" v-if="project.customHtml" v-html="project.customHtml"></div>
-      <img v-for="image in project.images" :src="'media/' + image" alt="" class="topImage">
+      <img v-for="image in project.images" :src="'media/' + image" alt="" class="topImage" :key="image" />
     </div>
 
     <div class="content">
@@ -46,7 +46,7 @@ export default {
         </div>
         <div class="technologies">
           <img class="technology" v-for="tech in project.technologies.slice().reverse()" :title="tech" :alt="tech"
-            :src="'media/technologies/' + data.iconsSrc[tech]" />
+            :src="'media/technologies/' + data.iconsSrc[tech]" :key="tech"/>
         </div>
       </header>
       <div class="description">
@@ -54,9 +54,11 @@ export default {
 
         <!-- links -->
         <div v-if="project.links" class="links">
-            <div class="link" v-for="link in project.links">
-              <a :href="link.url" target="_blank">{{ link.name }}</a>
+          <a :href="link.url" target="_blank" v-for="link in project.links" :key="link.name">
+            <div class="link">
+              {{ link.name }}
             </div>
+          </a>
         </div>
 
         <div class="longDescription" v-html="project.longDescription"></div>
@@ -181,7 +183,7 @@ h3 {
   font-size: 14pt;
   white-space: pre-wrap;
 }
-a {
+.link {
   color: white;
   background-color: rgb(0, 151, 189);
   padding: 9px 18px;
@@ -189,19 +191,21 @@ a {
   font-weight: 600;
   font-size: 14pt;
   line-height: 14pt;
+  text-align: center;
 }
-a:hover {
+.link:hover {
   background-color: rgb(0, 114, 145);
 }
 .links {
   display: flex;
   flex-direction: row;
   gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+  margin-top: 5px;
 }
 .link {
   display: inline-block;
-  margin-bottom: 10px;
-  margin-top: 5px;
 }
 .projectDescription {
   display: flex;
@@ -240,7 +244,8 @@ a:hover {
     /* display: flex; */
     flex-direction: column-reverse;
   }
-}</style>
+}
+</style>
 <style>
 b {
   font-weight: bold;

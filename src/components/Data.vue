@@ -473,7 +473,11 @@ Overall, the Apartment Chatbot is a powerful and valuable tool for maintaining a
 To ensure an optimal user experience, I implemented responsive design to make sure the portfolio looks great on a variety of devices. I also dedicated time to prototyping and testing different design approaches to ensure that the portfolio was easy to navigate.
 
 Through this project, I was able to showcase my work and demonstrate my skills and experience to potential employers or clients. It serves as a useful tool for highlighting my capabilities and expertise.`,
-        technologies: ['Vue']
+        technologies: ['Vue'],
+        links: [{
+          "name": "Repository",
+          "url": "https://github.com/MarvinRucinski/Portfolio"
+        }]
       },
 
 
@@ -557,7 +561,19 @@ The website was created using the PrestaShop open source e-commerce solution. It
 
 Overall, the website and the online store were a great success, and I am proud of the work that I did to create them. The website and the online store were a great success, and I am proud of the work that I did to create them.`,
         images: ['take-and-tie/prezentacja/prezentacja.001.jpeg', 'take-and-tie/prezentacja/prezentacja.004.jpeg', 'take-and-tie/prezentacja/prezentacja.005.jpeg', 'take-and-tie/prezentacja/prezentacja.006.jpeg'],
-        technologies: ['PrestaShop', 'PHP', 'HTML5', 'CSS3']
+        technologies: ['PrestaShop', 'PHP', 'HTML5', 'CSS3'],
+        "links": [
+          {
+          "name": "Article published by Ministerstwo Rozwoju i Technologii",
+          "url": "https://www.gov.pl/web/rozwoj-technologia/mlodzi-miniprzedsiebiorcy-zaprezentowali-swoje-produkciki-w-mpit"
+          }, {
+          "name": "Article published in Gazeta Lubuska",
+            "url": "https://gazetalubuska.pl/zielona-gora-ich-sznurowki-pozwola-ci-rozwiazac-problem-nudnych-butow-poznaj-wlascicieli-uczniowskiej-firmy-taketie/ar/c3-14115181"
+          }, {
+            "name": "Article published in Gazeta Wyborcza",
+            "url": "https://zielonagora.wyborcza.pl/zielonagora/7,35182,24459306,biznes-licealistow-z-jedynki-ich-sznurowki-poleca-owsiak.html"
+          }
+        ]
       },
 
       {

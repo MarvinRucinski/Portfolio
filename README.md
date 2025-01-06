@@ -1,16 +1,37 @@
 # My Portfolio
 
-This template should help get you started developing with Vue 3 in Vite.
+Welcome to my portfolio! This website showcases my projects, skills, and achievements. It is built with **Vue 3** and **Vite**.
 
-## Recommended IDE Setup
+You can view the live site here: [My Portfolio](https://marvinrucinski.github.io/Portfolio/#/).
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+---
 
-## Customize configuration
+## Features
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+- **Responsive Design**: Optimized for both desktop and mobile devices.
+- **Modern Tech Stack**: Built using Vue 3, Vite, and other modern tools.
+- **Project Showcase**: Includes examples of my work, with descriptions and links to repositories.
+- **Simple Navigation**: User-friendly interface to explore my skills and projects.
 
-## Project Setup
+---
+
+## Technologies Used
+
+Vue 3, Vite, HTML5, CSS3
+
+---
+
+## Live Demo
+
+You can check out the live version of my portfolio here: [My Portfolio](https://marvinrucinski.github.io/Portfolio/#/).
+
+---
+
+## For Developers: Project Setup
+
+If you'd like to run this project locally, follow the steps below:
+
+### Install dependencies:
 
 ```sh
 npm install
