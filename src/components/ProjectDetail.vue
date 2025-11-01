@@ -8,8 +8,8 @@ export default {
   data() {
     try {
       const project = data.projects.find(projectGroup =>
-        (projectGroup.find(project => project.title + '-' + project.subtitle == this.$route.params.name))
-      ).find(project => project.title + '-' + project.subtitle == this.$route.params.name)
+        (projectGroup.find(project => project.title + '-' + (project.subtitle || '') == this.$route.params.name))
+      ).find(project => project.title + '-' + (project.subtitle || '') == this.$route.params.name)
       return {
         project: project
       }
@@ -45,7 +45,7 @@ export default {
           </div>
         </div>
         <div class="technologies">
-          <img class="technology" v-for="tech in project.technologies.slice().reverse()" :title="tech" :alt="tech"
+          <img class="technology" v-for="tech in project.technologies?.slice().reverse()" :title="tech" :alt="tech"
             :src="'media/technologies/' + data.iconsSrc[tech]" :key="tech"/>
         </div>
       </header>

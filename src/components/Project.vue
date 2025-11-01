@@ -21,7 +21,7 @@ import data from './Data.vue'
 </script>
 
 <template>
-    <router-link custom :to="'/' + title + '-' + subtitle + '/details'" v-slot="{ navigate }">
+    <router-link custom :to="'/' + title + '-' + (subtitle || '') + '/details'" v-slot="{ navigate }">
         <div :id="title" class="card" role="link" @click="navigate">
 
             <div class="header">
@@ -33,8 +33,8 @@ import data from './Data.vue'
                     </div>
                 </header>
                 <div class="technologies">
-                    <img class="technology" v-for="tech in technologies.slice().reverse()" :title="tech" :alt="tech"
-                        :src="'media/technologies/' + data.iconsSrc[tech]" />
+                    <img class="technology" v-for="tech in technologies?.slice().reverse()" :title="tech" :alt="tech"
+                        :src="'media/technologies/' + data.iconsSrc[tech]" :key="tech"/>
                 </div>
             </div>
             <!-- <img class="main-image" v-if="images" :src="'media/' + images[0]"/> -->

@@ -66,15 +66,15 @@ export default {
     [
 
     {
-      title: "Duties.app (Dyżury.app)",
+      title: "Duty.app (Dyżury.app)",
       icon: "dyzury-app/logo.png",
       iconClass: "app",
-      shortDescription: "A web app that allows roommates to track and assign cleaning duties.",
-      longDescription: `🚀 I'm excited to share the result of my work – the Duties App! 🏠📲
+      shortDescription: "A mobile app that allows roommates to track and assign cleaning duties.",
+        longDescription: `🚀 I'm excited to share the result of my work – the Duty App! 🏠📲
 
 This tool was created for people who share a space with others and want to maintain order without unnecessary stress. The app is especially useful for students renting apartments by the room, where it's easy to get confused about household chores.
 
-With the Duties App, cleaning together is much simpler:
+With the Duty App, cleaning together is much simpler:
 
 ✅ Create and assign duties for individual rooms or the entire apartment
 ✅ Automatic notifications about upcoming duties
@@ -137,14 +137,6 @@ The system is designed to improve efficiency, reduce errors, and provide better 
       },
 
       {
-        title: "Juwenalia 2025 App",
-        shortDescription: "An exciting new app developed in collaboration with the Solvro scientific association for the Juwenalia 2025 event.",
-        longDescription: "I'm thrilled to announce that I'm working on a new app in collaboration with the Solvro scientific association at Wrocław University of Technology for the Juwenalia #wrocławrazem 2025 event. While we can't reveal any specific details just yet, we can assure you that this app will bring a unique and engaging experience to the event. Stay tuned for more updates as we get closer to the launch date!",
-        // images: [],
-        technologies: ["JavaScript", "HTML5", "CSS3"]
-      },
-
-      {
         title: "Process Line Project",
         icon: "automatyk/logo.jpg",
         shortDescription: "A miniature conveyor line with conveyor belts, a vision system, and detail sorting.",
@@ -152,21 +144,64 @@ The system is designed to improve efficiency, reduce errors, and provide better 
 
 The conveyor line is designed to simulate real-world industrial processes on a smaller scale, providing valuable hands-on experience in automation and control systems. The project involves the integration of various components, including:
 
-<b>Conveyor Belts</b>: These are used to transport items along the line, mimicking the movement of goods in a manufacturing environment.
-<b>Vision System</b>: This system utilizes cameras and image processing algorithms to identify and classify items on the conveyor belt. It plays a crucial role in ensuring that items are correctly sorted based on predefined criteria.
-<b>Detail Sorting Mechanism</b>: Once the vision system identifies the items, the sorting mechanism directs them to the appropriate bins or sections. This process is automated to ensure efficiency and accuracy.
+<b>Conveyor Belts:</b> These are used to transport items along the line, mimicking the movement of goods in a manufacturing environment.
+<b>Vision System:</b> This system utilizes cameras and image processing algorithms to identify and classify items on the conveyor belt. It plays a crucial role in ensuring that items are correctly sorted based on predefined criteria.
+<b>Detail Sorting Mechanism:</b> Once the vision system identifies the items, the sorting mechanism directs them to the appropriate bins or sections. This process is automated to ensure efficiency and accuracy.
+<b>Web-based Control Panel:</b> The entire process line can be monitored and controlled through a user-friendly web interface, allowing operators to oversee operations and make adjustments as needed.
 
-As the project leader, I am responsible for overseeing the development and integration of these components, ensuring that the system operates seamlessly. The Process Line Project not only provides practical experience in automation but also serves as a valuable educational tool for members of the SNS Automatyk association, helping them to develop skills in robotics, programming, and system integration.`,
-        // images: ["automatyk/conveyor-line.jpg"],
-        technologies: ["Python", "RPi", "Fusion360", "3D Printing"]
+As both the team leader and the person responsible for the vision system and the application, I supervised the entire development process and directly contributed to the implementation of key software components.
+During the project, I also developed a custom Python library Snap7 Easy Vars, which simplifies the management of variables in communication with the Siemens S7-1200 PLC, significantly streamlining the integration process between the control system and the application.
+
+The Process Line Project not only provides practical experience in automation but also serves as a valuable educational tool for members of the SNS Automatyk association, helping them to develop skills in robotics, programming, and system integration.`,
+        images: ["automatyk/linia/targi.jpeg"],
+        technologies: ["Python", "RPi", "Fusion360", "3D Printing"],
+        customHtml: `
+<iframe id="ytplayer" type="text/html" width="100%" height="100%" style="aspect-ratio: 16 / 9;"
+  src="https://www.youtube.com/embed/3EOQ3hkDdtI?si=NuDsnHqM8lBwaAHA"
+  frameborder="0"/>`,
+        links: [{
+          "name": "Repository",
+          "url": "https://github.com/SNS-Automatyk/Linia-Procesowa-System-Wizyjny"
+        }, {
+          "name": "Snap7 Easy Vars Library",
+          "url": "https://pypi.org/project/python-snap7-easy-vars/"
+          }]
       },
 
+      //Budka wyciszająca 
+      {
+        title: "Soundproof Booths",
+        icon: "automatyk/logo.jpg",
+        shortDescription: "Digitalization of soundproof booths designed to provide a quiet space in noisy environments.",
+        longDescription: `As members of the SNS Automatyk scientific association, our task is to digitalize the soundproof booths located across the Wrocław University of Science and Technology campus. The goal of this project is to integrate the booths with a digital system that allows users to check their occupancy status in real time.  
+
+This functionality will be available directly within the <b>toPWR</b> mobile application, developed by the <b>Solvro</b> scientific association, with whom we are collaborating on this project. Our team is responsible for implementing the hardware and software components that detect and transmit the booth status, ensuring seamless communication between the physical devices and the application.  
+
+By combining automation, IoT, and software integration, this initiative aims to enhance the comfort and efficiency of students using the campus facilities.`,
+        // images: ['budka-wyciszajaca/img1.jpeg', 'budka-wyciszajaca/img2.jpeg'],
+        technologies: ['ESP8266'],
+      }
 
     ],
 
 
     //== Completed Projects ==//
     [
+
+      {
+        title: "Juwenalia 2025 App",
+        shortDescription: "An app developed in collaboration with the Solvro scientific association for the Juwenalia 2025 event.",
+        longDescription: "The app/website was developed in collaboration with the Solvro scientific association for Juwenalia #wrocławrazem 2025. It provides complete event information: the program and concert schedule, a list of artists with descriptions, an interactive map of stages and zones, announcements and news, and practical details (location, transport, regulations). The project is responsive, fast, and was successfully used during the event.",
+        images: [
+          "juwenalia-2025/webpage-mockup.png",
+        ],
+        // technologies: ["JavaScript", "HTML5", "CSS3"]
+        "links": [{
+          "name": "Website",
+          "url": "https://juwenalia.wroc.pl/"
+        }]
+      },
+
       // kolimator  https://github.com/MarvinRucinski/kolimator_project
       {
         "title": "CTS - Comarch Targeting System",
