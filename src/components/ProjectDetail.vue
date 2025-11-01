@@ -25,7 +25,7 @@ export default {
 </script>
 
 <template>
-  <div class="back-link" @click="$router.go(-1)">
+  <div class="back-link" @click="$router.back(); $router.push('/')">
     <div class="arrow"></div>
   </div>
   <div class="projectDescription">
