@@ -8,10 +8,10 @@ export default {
           name: "I'm currently working with",
           icons: ['Python', 'Django', 'Vue', 'Capacitor', 'HTML5', 'CSS3', 'JavaScript', 'Postgres', 'Git', 'Tailwind', 'Figma', 'Firebase', 'Docker', 'MacOS', 'Linux', 'GNU Bash', 'VS Code'],
         },
-        learning: {
-          name: "I'm currently learning",
-          icons: ['PyTorch', 'TensorFlow'],
-        },
+        // learning: {
+        //   name: "I'm currently learning",
+        //   icons: ['PyTorch', 'TensorFlow'],
+        // },
         // pastExperience: {
         //   name: "I've worked with",
         //   icons: ['Swift', 'PHP', 'TypeScript', 'Flask', 'JQuery', 'React', 'MySQL', 'MongoDB', 'C++', 'AdobeXD', 'Vite', 'Arduino', 'RPi', 'XCode'],

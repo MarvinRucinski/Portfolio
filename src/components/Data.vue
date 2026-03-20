@@ -97,32 +97,30 @@ With the Duty App, cleaning together is much simpler:
       ]
     },
 
-      {
-        title: "Miglator - sign language translator",
-        // icon: "miglator/logo.png",
-        shortDescription: "An innovative solution that bridges communication gaps for people who are deaf or hard of hearing.",
-        longDescription: `🎉 1st place at the VII edition of Bitehack! 🎉
 
-I’m incredibly proud to be part of the winning team alongside Franciszek Radziwolski, Jakub Wasilewski, and Kacper Członka! Representing our SNS Automatyk science club at the VII edition of Bitehack, we tackled the challenge under the theme “Become a Hero” 🦸‍♂️.
+    {
+      title: "Testownik",
+      icon: "testownik/logo.png",
+      shortDescription: "A web app that helps students quickly create, share, and solve interactive quizzes before exams.",
+      longDescription: `Testownik is an educational platform developed with the <b>Solvro</b> scientific association, where I currently work as a <b>Project Manager</b>, to make exam preparation faster, clearer, and less stressful for students.
 
-🚀 What did we create?
-We developed “Miglator” – an innovative solution that bridges communication gaps for people who are deaf or hard of hearing. 🧠
+The app allows users to turn revision materials into interactive quizzes, including support for image-based questions. Each test can be shared instantly with a direct link, so classmates and entire course groups can practice together.
 
-🔹 The system uses a camera and a neural network to recognize sign language and display it as a text message.
-🔹 It works the other way around, too – a microphone recognizes speech and converts it into text visible to the deaf user.
+The platform works on different devices and can be used even without registration. For logged-in users, Testownik provides additional features, such as quiz synchronization and quick integration with student workflows.
 
-We had only 24 hours to turn this idea into a working project, and we did it! 1st place is a testament to our teamwork, creativity, and determination. 🏆👏
-
-A huge thank you to Politechnika Wrocławska for the support and to my teammates for an unforgettable experience!
-
-We are currently working on further developing the project to enhance its capabilities and make it more accessible to a wider audience.`,
-        images: ['miglator/img.jpeg', 'miglator/img2.jpeg'],
-        technologies: ['Python', 'TensorFlow', 'PyTorch', 'RPi', '3D Printing', 'Fusion360'],
-        links: [{
-          "name": "Demo",
-          "url": "https://fb.watch/wJmfs1lx-j/"
-        }]
+From both a product and technical perspective, the project focuses on usability, speed, and practical value during intensive exam periods. Testownik has been actively developed since June 2024 and is continuously improved with new features by the team.`,
+      technologies: ['Django', 'React', 'TypeScript', 'Docker'],
+      images: ['testownik/preview.jpeg', 'testownik/team.jpeg'],
+      links: [{
+        "name": "Website",
+        "url": "https://testownik.solvro.pl/"
       },
+        {
+          "name": "Project page (Solvro)",
+          "url": "https://solvro.pwr.edu.pl/pl/portfolio/testownik/"
+        }
+      ]
+    },
 
 
       {
@@ -135,6 +133,26 @@ The system is designed to improve efficiency, reduce errors, and provide better 
         // images: ['masterche-logoplaste/wms-dashboard.png'],
         technologies: ['Django', 'HTML5', 'CSS3', "JavaScript", 'Tailwind']
       },
+
+      //Budka wyciszająca 
+      {
+        title: "Soundproof Booths",
+        icon: "automatyk/logo.jpg",
+        shortDescription: "Digitalization of soundproof booths designed to provide a quiet space in noisy environments.",
+        longDescription: `As members of the SNS Automatyk scientific association, our task is to digitalize the soundproof booths located across the Wrocław University of Science and Technology campus. The goal of this project is to integrate the booths with a digital system that allows users to check their occupancy status in real time.  
+
+This functionality will be available directly within the <b>toPWR</b> mobile application, developed by the <b>Solvro</b> scientific association, with whom we are collaborating on this project. Our team is responsible for implementing the hardware and software components that detect and transmit the booth status, ensuring seamless communication between the physical devices and the application.  
+
+By combining automation, IoT, and software integration, this initiative aims to enhance the comfort and efficiency of students using the campus facilities.`,
+        // images: ['budka-wyciszajaca/img1.jpeg', 'budka-wyciszajaca/img2.jpeg'],
+        technologies: ['ESP8266'],
+      }
+
+    ],
+
+
+    //== Completed Projects ==//
+    [
 
       {
         title: "Process Line Project",
@@ -165,28 +183,35 @@ The Process Line Project not only provides practical experience in automation bu
         }, {
           "name": "Snap7 Easy Vars Library",
           "url": "https://pypi.org/project/python-snap7-easy-vars/"
-          }]
+        }]
       },
 
-      //Budka wyciszająca 
       {
-        title: "Soundproof Booths",
-        icon: "automatyk/logo.jpg",
-        shortDescription: "Digitalization of soundproof booths designed to provide a quiet space in noisy environments.",
-        longDescription: `As members of the SNS Automatyk scientific association, our task is to digitalize the soundproof booths located across the Wrocław University of Science and Technology campus. The goal of this project is to integrate the booths with a digital system that allows users to check their occupancy status in real time.  
+        title: "Miglator - sign language translator",
+        // icon: "miglator/logo.png",
+        shortDescription: "An innovative solution that bridges communication gaps for people who are deaf or hard of hearing.",
+        longDescription: `🎉 1st place at the VII edition of Bitehack! 🎉
 
-This functionality will be available directly within the <b>toPWR</b> mobile application, developed by the <b>Solvro</b> scientific association, with whom we are collaborating on this project. Our team is responsible for implementing the hardware and software components that detect and transmit the booth status, ensuring seamless communication between the physical devices and the application.  
+I’m incredibly proud to be part of the winning team alongside Franciszek Radziwolski, Jakub Wasilewski, and Kacper Członka! Representing our SNS Automatyk science club at the VII edition of Bitehack, we tackled the challenge under the theme “Become a Hero” 🦸‍♂️.
 
-By combining automation, IoT, and software integration, this initiative aims to enhance the comfort and efficiency of students using the campus facilities.`,
-        // images: ['budka-wyciszajaca/img1.jpeg', 'budka-wyciszajaca/img2.jpeg'],
-        technologies: ['ESP8266'],
-      }
+🚀 What did we create?
+We developed “Miglator” – an innovative solution that bridges communication gaps for people who are deaf or hard of hearing. 🧠
 
-    ],
+🔹 The system uses a camera and a neural network to recognize sign language and display it as a text message.
+🔹 It works the other way around, too – a microphone recognizes speech and converts it into text visible to the deaf user.
 
+We had only 24 hours to turn this idea into a working project, and we did it! 1st place is a testament to our teamwork, creativity, and determination. 🏆👏
 
-    //== Completed Projects ==//
-    [
+A huge thank you to Politechnika Wrocławska for the support and to my teammates for an unforgettable experience!
+
+We are currently working on further developing the project to enhance its capabilities and make it more accessible to a wider audience.`,
+        images: ['miglator/img.jpeg', 'miglator/img2.jpeg'],
+        technologies: ['Python', 'TensorFlow', 'PyTorch', 'RPi', '3D Printing', 'Fusion360'],
+        links: [{
+          "name": "Demo",
+          "url": "https://fb.watch/wJmfs1lx-j/"
+        }]
+      },
 
       {
         title: "Juwenalia 2025 App",
@@ -229,26 +254,6 @@ I want to thank the team for the collaborative effort, Mateusz Żurawski for his
       },
 
       {
-        "title": "eVote EU - HACKYeah",
-        "shortDescription": "An application designed to encourage young people to participate in the European Parliament elections.",
-        "longDescription": `Together with my colleagues, I had the opportunity to take part in HACKYeah – the largest stationary hackathon in Europe, held at Tauron Arena in Kraków. This event was a true mix of adrenaline, creativity, and technology – and we rose to the challenge!
-
-🌟 What did we create?
-
-Our goal was more than just coding. In 24 hours, we designed an application aimed at encouraging young people to participate in the European Parliament elections. We wanted to show that voting matters and that every vote counts.
-
-🏆 Finalist title!
-
-Despite tough competition, our project was recognized, and we earned the title of finalists! This is a great honor for us and proof that our work has real value.`,
-        "images": ["hackyeah/ss.png", "hackyeah/img.jpeg"],
-        "technologies": ["Figma", 'React'],
-        // "links": [{
-        //   "name": "Event Website",
-        //   "url": "https://hackyeah.pl"
-        // }]
-      },
-
-      {
         title: "The Student Camp App",
         subtitle: "Summer 2024",
         icon: "oboz-studentow-pwr/lato-2024/logo.png", iconClass: "app",
@@ -269,10 +274,10 @@ A new feature added to the app this year is the "Camp Tinder," which allows part
         images: [//'oboz-studentow-pwr/lato-2024/home.png', 'oboz-studentow-pwr/lato-2024/profil1.png',
           'oboz-studentow-pwr/lato-2024/post1.jpg', 'oboz-studentow-pwr/lato-2024/post2.jpg'],
         technologies: ['Capacitor', 'Vue', 'HTML5', 'JavaScript', 'CSS3', 'Python', 'Django', 'Docker', 'Firebase'],
-        links: [{
-          "name": "Camp Website",
-          "url": "https://oboz.samorzad.pwr.edu.pl"
-        }]
+        // links: [{
+        //   "name": "Camp Website",
+        //   "url": "https://oboz.samorzad.pwr.edu.pl"
+        // }]
         
       },
       {
@@ -349,6 +354,26 @@ This project exemplifies the combination of creativity, teamwork, and technologi
           "name": "Repository",
           "url": "https://github.com/SNS-Automatyk/Panel-Sterowania-Linia-Procesowa"
         }]
+      },
+
+      {
+        "title": "eVote EU - HACKYeah",
+        "shortDescription": "An application designed to encourage young people to participate in the European Parliament elections.",
+        "longDescription": `Together with my colleagues, I had the opportunity to take part in HACKYeah – the largest stationary hackathon in Europe, held at Tauron Arena in Kraków. This event was a true mix of adrenaline, creativity, and technology – and we rose to the challenge!
+
+🌟 What did we create?
+
+Our goal was more than just coding. In 24 hours, we designed an application aimed at encouraging young people to participate in the European Parliament elections. We wanted to show that voting matters and that every vote counts.
+
+🏆 Finalist title!
+
+Despite tough competition, our project was recognized, and we earned the title of finalists! This is a great honor for us and proof that our work has real value.`,
+        "images": ["hackyeah/ss.png", "hackyeah/img.jpeg"],
+        "technologies": ["Figma", 'React'],
+        // "links": [{
+        //   "name": "Event Website",
+        //   "url": "https://hackyeah.pl"
+        // }]
       },
 
       {
