@@ -5,6 +5,7 @@ import data from './Data.vue'
 
 <script>
 import { trackEvent } from '../utils/analytics'
+import { getDarkModeMediaQuery, getInitialDarkMode, resolveThemeAsset } from '../utils/themeAssets'
 
 export default {
   data() {
@@ -13,21 +14,49 @@ export default {
         (projectGroup.find(project => project.title + '-' + (project.subtitle || '') == this.$route.params.name))
       ).find(project => project.title + '-' + (project.subtitle || '') == this.$route.params.name)
       return {
-        project: project
+        project: project,
+        isDarkMode: getInitialDarkMode(),
+        darkModeMediaQuery: null,
       }
     }
     catch {
       this.$router.push('/404')
     }
   },
+  computed: {
+    projectIconConfig() {
+      return resolveThemeAsset(this.project?.icon, {
+        isDarkMode: this.isDarkMode,
+        basePath: 'media/'
+      });
+    }
+  },
   mounted() {
     window.scrollTo(0,0);
+    this.darkModeMediaQuery = getDarkModeMediaQuery();
+
+    if (this.darkModeMediaQuery) {
+      this.darkModeMediaQuery.addEventListener('change', this.onDarkModeChange);
+    }
+
     trackEvent('portfolio_view_project_details', {
       project_title: this.project?.title || 'unknown',
       project_subtitle: this.project?.subtitle || ''
     });
   },
+  beforeUnmount() {
+    this.darkModeMediaQuery?.removeEventListener('change', this.onDarkModeChange);
+  },
   methods: {
+    onDarkModeChange(event) {
+      this.isDarkMode = event.matches;
+    },
+    getTechnologyIconConfig(technologyName) {
+      return resolveThemeAsset(data.iconsSrc[technologyName], {
+        isDarkMode: this.isDarkMode,
+        basePath: 'media/technologies/'
+      });
+    },
     onProjectLinkClick(link) {
       let linkDomain = 'unknown';
 
@@ -62,7 +91,7 @@ export default {
     <div class="content">
       <header>
         <div class="name">
-          <img class="icon" :class="project.iconClass" v-if="project.icon" :src="'media/' + project.icon" />
+          <img class="icon" :class="[project.iconClass, projectIconConfig.className]" v-if="projectIconConfig.src" :src="projectIconConfig.src" :style="projectIconConfig.style" />
           <div>
             <h3>{{ project.title }}</h3>
             <h4>{{ project.subtitle }}</h4>
@@ -70,7 +99,7 @@ export default {
         </div>
         <div class="technologies">
           <img class="technology" v-for="tech in project.technologies?.slice().reverse()" :title="tech" :alt="tech"
-            :src="'media/technologies/' + data.iconsSrc[tech]" :key="tech"/>
+            :src="getTechnologyIconConfig(tech).src" :style="getTechnologyIconConfig(tech).style" :class="getTechnologyIconConfig(tech).className" :key="tech"/>
         </div>
       </header>
       <div class="description">

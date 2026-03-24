@@ -84,3 +84,37 @@ Notes:
 - GA4 Measurement ID (`G-...`) is not a secret, but keep all future keys in `.env.local` and never commit them.
 - `.env*` files are ignored by git (except `.env.example`).
 - Restrict access in GA Admin: roles, data retention, and bot/internal traffic filters.
+
+## Theme-Aware Logos (Light/Dark)
+
+Project logos (`project.icon`) and technology logos (`iconsSrc[tech]`) can now be configured with:
+- different image source for light and dark mode,
+- optional inline CSS styles per mode (e.g. `filter: invert(1)`),
+- optional extra class name.
+
+Supported formats:
+
+```js
+// Backward compatible (single source)
+icon: 'my-logo.svg'
+
+// Theme-aware source/style/class
+icon: {
+	src: 'my-logo.svg',
+	light: {
+		src: 'my-logo-light.svg',
+		style: { filter: 'none' },
+		className: 'logo-light'
+	},
+	dark: {
+		src: 'my-logo-dark.svg',
+		style: { filter: 'invert(1)' },
+		className: 'logo-dark'
+	}
+}
+```
+
+Notes:
+- `src` is a fallback when `light.src` or `dark.src` is missing.
+- For project logos, path base is `media/`.
+- For technology logos, path base is `media/technologies/`.

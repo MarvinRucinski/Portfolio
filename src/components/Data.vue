@@ -2,7 +2,14 @@
 export default {
   iconsSrc: {
     'Python': 'python-colored.svg',
-    'Django': 'django-colored.svg',
+    'Django': {
+      src: 'django-colored.svg',
+      dark: {
+        style: {
+          filter: "brightness(0) invert(1)"
+        }
+      }
+    },
     'Flask': 'flask.svg',
     'Swift': 'swift-colored.svg',
     'PHP': 'php-colored.svg',
@@ -12,7 +19,14 @@ export default {
     'JQuery': 'jquery-colored.svg',
     'React': 'react-colored.svg',
     'Vue': 'vuejs-colored.svg',
-    'MySQL': 'mysql-colored.svg',
+    'MySQL': {
+      src: 'mysql-colored.svg',
+        dark: {
+        style: {
+          filter: "brightness(1.7)"
+        }
+      }
+    },
     'C++': 'cplusplus-colored.svg',
     'AdobeXD': 'xd-colored.svg',
     'Figma': 'figma-colored.svg',
@@ -23,14 +37,42 @@ export default {
     'Kotlin': 'kotlin-colored.svg',
     'PyGame': 'pygame.svg',
     'MacOS': 'macos-colored.svg',
-    'iOS': 'iOS.svg',
-    '3D Printing': '3d-print-logo.png',
+    'iOS': {
+      src: 'iOS.svg',
+        dark: {
+        style: {
+          filter: "invert(1)"
+        }
+      }
+    },
+    '3D Printing': {
+      src: '3d-print-logo.png',
+        dark: {
+        style: {
+          filter: "invert(1)"
+        }
+      }
+    },
     'WLED': 'wled.png',
     'Fusion360': 'fusion360.png',
     'ESPHome': 'esphome.svg',
-    'OpenAI': 'OpenAI.svg',
+    'OpenAI': {
+      src: 'OpenAI.svg',
+        dark: {
+        style: {
+          filter: "invert(1)"
+        }
+      }
+    },
     "Docker": "docker-colored.svg",
-    "MacOS": "macos-colored.svg",
+    "MacOS": {
+      src: "macos-colored.svg",
+      dark: {
+        style: {
+          filter: "invert(1)"
+        }
+      }
+    },
     "Linux": "linux-colored.svg",
     "GNU Bash": "gnubash-colored.svg",
     "VS Code": "visualstudiocode-colored.svg",
@@ -44,10 +86,24 @@ export default {
     "MongoDB": "mongodb-colored.svg",
     "Vite": "vite-colored.svg",
     "Arduino": "arduino-colored.svg",
-    "RPi": "raspberrypi-colored.svg",
+    "RPi": {
+      src: "raspberrypi-colored.svg",
+        dark: {
+        style: {
+          filter: "brightness(1.3)"
+        }
+      }
+    },
     "Klipper3D": "klipper3d.png",
     "XCode": "xcode-colored.svg",
-    "GitHub": "github.svg",
+    "GitHub": {
+      src: "github.svg",
+      dark: {
+        style: {
+          filter: "invert(1)"
+        }
+      }
+    },
     "LinkedIn": "linkedin.svg",
     "StackOverflow": "stackoverflow.svg",
     "Capacitor": "capacitor-js.svg",
@@ -100,7 +156,14 @@ With the Duty App, cleaning together is much simpler:
 
     {
       title: "Testownik",
-      icon: "testownik/logo.png",
+      icon: {
+        light: {
+          src: "testownik/logo_light.png"
+        },
+        dark: {
+          src: "testownik/logo_dark.png"
+        }
+      },
       shortDescription: "A web app that helps students quickly create, share, and solve interactive quizzes before exams.",
       longDescription: `Testownik is an educational platform developed with the <b>Solvro</b> scientific association, where I currently work as a <b>Project Manager</b>, to make exam preparation faster, clearer, and less stressful for students.
 

@@ -1,6 +1,7 @@
 <script>
 import iconsSrc from './Data.vue'
 import { trackEvent } from '../utils/analytics'
+import { getDarkModeMediaQuery, getInitialDarkMode, resolveThemeAsset } from '../utils/themeAssets'
 
 export default {
   data() {
@@ -33,10 +34,33 @@ export default {
           link: 'https://www.stackoverflow.com/users/10039005/marvin-ruciński',
         },
       },
-      iconsSrc: iconsSrc.iconsSrc
+      iconsSrc: iconsSrc.iconsSrc,
+      isDarkMode: getInitialDarkMode(),
+      darkModeMediaQuery: null,
     }
   },
+  mounted() {
+    this.darkModeMediaQuery = getDarkModeMediaQuery();
+
+    if (!this.darkModeMediaQuery) {
+      return;
+    }
+
+    this.darkModeMediaQuery.addEventListener('change', this.onDarkModeChange);
+  },
+  beforeUnmount() {
+    this.darkModeMediaQuery?.removeEventListener('change', this.onDarkModeChange);
+  },
   methods: {
+    onDarkModeChange(event) {
+      this.isDarkMode = event.matches;
+    },
+    getTechnologyIconConfig(technologyName) {
+      return resolveThemeAsset(this.iconsSrc[technologyName], {
+        isDarkMode: this.isDarkMode,
+        basePath: 'media/technologies/'
+      });
+    },
     onSocialClick(social) {
       trackEvent('portfolio_click_social', {
         social_name: social?.name || 'unknown',
@@ -61,7 +85,7 @@ export default {
       <h3>Find me on</h3>
       <p class="icons">
         <a rel="noopener noreferrer" v-for="social in socials" :key="social.name" :href="social.link" target="_blank" :title="social.name" @click="onSocialClick(social)"><img
-            :src="'media/technologies/' + iconsSrc[social.name]" class="tech"  :alt="social.name"
+            :src="getTechnologyIconConfig(social.name).src" :style="getTechnologyIconConfig(social.name).style" :class="['tech', getTechnologyIconConfig(social.name).className]" :alt="social.name"
             :title="social.name" /></a>
       </p>
     </div>
@@ -70,7 +94,7 @@ export default {
     <div v-for="(section, sectionKey) in icons" :key="sectionKey" class="section">
       <h3>{{section.name}}</h3>
       <p class="icons">
-        <a rel="noreferrer" v-for="tech in section.icons" :key="tech"><img :src="'media/technologies/'+iconsSrc[tech]" class="tech"
+        <a rel="noreferrer" v-for="tech in section.icons" :key="tech"><img :src="getTechnologyIconConfig(tech).src" :style="getTechnologyIconConfig(tech).style" :class="['tech', getTechnologyIconConfig(tech).className]"
             :alt="tech" :title="tech" /></a>
       </p>
     </div>

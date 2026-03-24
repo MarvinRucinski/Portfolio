@@ -1,5 +1,6 @@
 <script>
 import { trackEvent } from '../utils/analytics'
+import { getDarkModeMediaQuery, getInitialDarkMode, resolveThemeAsset } from '../utils/themeAssets'
 
 export default {
     props: {
@@ -9,13 +10,48 @@ export default {
         longDescription: String,
         technologies: Array,
         images: Array,
-        icon: String,
+        icon: [String, Object],
         iconClass: String,
         summary: String,
         customHtml: String,
         links: Array
     },
+    data() {
+        return {
+            isDarkMode: getInitialDarkMode(),
+            darkModeMediaQuery: null,
+        }
+    },
+    computed: {
+        projectIconConfig() {
+            return resolveThemeAsset(this.icon, {
+                isDarkMode: this.isDarkMode,
+                basePath: 'media/'
+            });
+        }
+    },
+    mounted() {
+        this.darkModeMediaQuery = getDarkModeMediaQuery();
+
+        if (!this.darkModeMediaQuery) {
+            return;
+        }
+
+        this.darkModeMediaQuery.addEventListener('change', this.onDarkModeChange);
+    },
+    beforeUnmount() {
+        this.darkModeMediaQuery?.removeEventListener('change', this.onDarkModeChange);
+    },
     methods: {
+        onDarkModeChange(event) {
+            this.isDarkMode = event.matches;
+        },
+        getTechnologyIconConfig(technologyName) {
+            return resolveThemeAsset(data.iconsSrc[technologyName], {
+                isDarkMode: this.isDarkMode,
+                basePath: 'media/technologies/'
+            });
+        },
         onCardClick(navigate) {
             trackEvent('portfolio_select_project', {
                 project_title: this.title || 'unknown',
@@ -36,7 +72,7 @@ import data from './Data.vue'
 
             <div class="header">
                 <header>
-                    <img class="icon" :class="iconClass" v-if="icon" :src="'media/' + icon" />
+                    <img class="icon" :class="[iconClass, projectIconConfig.className]" v-if="projectIconConfig.src" :src="projectIconConfig.src" :style="projectIconConfig.style" />
                     <div>
                         <h3>{{ title }}</h3>
                         <h4>{{ subtitle }}</h4>
@@ -44,7 +80,7 @@ import data from './Data.vue'
                 </header>
                 <div class="technologies">
                     <img class="technology" v-for="tech in technologies?.slice().reverse()" :title="tech" :alt="tech"
-                        :src="'media/technologies/' + data.iconsSrc[tech]" :key="tech"/>
+                        :src="getTechnologyIconConfig(tech).src" :style="getTechnologyIconConfig(tech).style" :class="getTechnologyIconConfig(tech).className" :key="tech"/>
                 </div>
             </div>
             <!-- <img class="main-image" v-if="images" :src="'media/' + images[0]"/> -->
