@@ -1,4 +1,5 @@
 <script>
+import { trackEvent } from '../utils/analytics'
 
 export default {
     props: {
@@ -13,6 +14,15 @@ export default {
         summary: String,
         customHtml: String,
         links: Array
+    },
+    methods: {
+        onCardClick(navigate) {
+            trackEvent('portfolio_select_project', {
+                project_title: this.title || 'unknown',
+                project_subtitle: this.subtitle || ''
+            });
+            navigate();
+        }
     }
 }
 </script>
@@ -22,7 +32,7 @@ import data from './Data.vue'
 
 <template>
     <router-link custom :to="'/' + title + '-' + (subtitle || '') + '/details'" v-slot="{ navigate }">
-        <div :id="title" class="card" role="link" @click="navigate">
+        <div :id="title" class="card" role="link" @click="onCardClick(navigate)">
 
             <div class="header">
                 <header>

@@ -3,6 +3,7 @@ import { createRouter, createWebHashHistory } from "vue-router";
 import Home from './components/Home.vue';
 import ProjectDetail from './components/ProjectDetail.vue';
 import App from './App.vue'
+import { initAnalytics, trackPageView } from './utils/analytics'
 
 import './assets/main.css'
 
@@ -21,6 +22,14 @@ const router = createRouter({
     history: createWebHashHistory(),
     routes, // short for `routes: routes`
 })
+
+const isAnalyticsEnabled = initAnalytics();
+
+if (isAnalyticsEnabled) {
+    router.afterEach((to) => {
+        trackPageView(to);
+    });
+}
 
 // 5. Create and mount the root instance.
 const app = createApp(App)

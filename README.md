@@ -48,3 +48,39 @@ npm run dev
 ```sh
 npm run build
 ```
+
+## Google Analytics (GA4)
+
+This project supports GA4 through an environment variable.
+
+1. Create a local environment file (not tracked by git):
+
+```sh
+cp .env.example .env.local
+```
+
+2. Add your GA4 Measurement ID in `.env.local`:
+
+```env
+VITE_GA_MEASUREMENT_ID=G-XXXXXXXXXX
+```
+
+3. Build and deploy as usual:
+
+```sh
+npm run build
+npm run deploy
+```
+
+Notes:
+- Analytics runs only in production builds.
+- If `VITE_GA_MEASUREMENT_ID` is missing, analytics is disabled.
+- The app respects browser Do Not Track.
+- IP anonymization is enabled and Google Signals is disabled by default.
+
+### Security for Public Repo + GitHub Pages
+
+- Do not store service account credentials, private keys, or API secrets in frontend code.
+- GA4 Measurement ID (`G-...`) is not a secret, but keep all future keys in `.env.local` and never commit them.
+- `.env*` files are ignored by git (except `.env.example`).
+- Restrict access in GA Admin: roles, data retention, and bot/internal traffic filters.

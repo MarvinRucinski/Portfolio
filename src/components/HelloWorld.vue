@@ -1,5 +1,7 @@
 <script>
 import iconsSrc from './Data.vue'
+import { trackEvent } from '../utils/analytics'
+
 export default {
   data() {
     return {
@@ -35,7 +37,13 @@ export default {
     }
   },
   methods: {
+    onSocialClick(social) {
+      trackEvent('portfolio_click_social', {
+        social_name: social?.name || 'unknown',
+      });
+    },
     scrollToNextSection() {
+      trackEvent('portfolio_scroll_to_projects');
       const nextSection = document.querySelector('#projects');
       nextSection.scrollIntoView({ behavior: 'smooth' });
     }
@@ -52,17 +60,17 @@ export default {
     <div class="section">
       <h3>Find me on</h3>
       <p class="icons">
-        <a rel="noreferrer" v-for="social in socials" :href="social.link" target="_blank" :title="social.name"><img
+        <a rel="noopener noreferrer" v-for="social in socials" :key="social.name" :href="social.link" target="_blank" :title="social.name" @click="onSocialClick(social)"><img
             :src="'media/technologies/' + iconsSrc[social.name]" class="tech"  :alt="social.name"
             :title="social.name" /></a>
       </p>
     </div>
 
     <!-- skills -->
-    <div v-for="section in icons" class="section">
+    <div v-for="(section, sectionKey) in icons" :key="sectionKey" class="section">
       <h3>{{section.name}}</h3>
       <p class="icons">
-        <a rel="noreferrer" v-for="tech in section.icons"><img :src="'media/technologies/'+iconsSrc[tech]" class="tech"
+        <a rel="noreferrer" v-for="tech in section.icons" :key="tech"><img :src="'media/technologies/'+iconsSrc[tech]" class="tech"
             :alt="tech" :title="tech" /></a>
       </p>
     </div>

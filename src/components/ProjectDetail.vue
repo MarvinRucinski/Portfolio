@@ -4,6 +4,8 @@ import data from './Data.vue'
 </script>
 
 <script>
+import { trackEvent } from '../utils/analytics'
+
 export default {
   data() {
     try {
@@ -20,6 +22,28 @@ export default {
   },
   mounted() {
     window.scrollTo(0,0);
+    trackEvent('portfolio_view_project_details', {
+      project_title: this.project?.title || 'unknown',
+      project_subtitle: this.project?.subtitle || ''
+    });
+  },
+  methods: {
+    onProjectLinkClick(link) {
+      let linkDomain = 'unknown';
+
+      try {
+        linkDomain = new URL(link.url).hostname;
+      }
+      catch {
+        linkDomain = 'invalid';
+      }
+
+      trackEvent('portfolio_open_project_link', {
+        project_title: this.project?.title || 'unknown',
+        link_name: link?.name || 'unknown',
+        link_domain: linkDomain
+      });
+    }
   }
 }
 </script>
@@ -54,7 +78,7 @@ export default {
 
         <!-- links -->
         <div v-if="project.links" class="links">
-          <a :href="link.url" target="_blank" v-for="link in project.links" :key="link.name">
+          <a :href="link.url" target="_blank" rel="noopener noreferrer" @click="onProjectLinkClick(link)" v-for="link in project.links" :key="link.name">
             <div class="link">
               {{ link.name }}
             </div>
