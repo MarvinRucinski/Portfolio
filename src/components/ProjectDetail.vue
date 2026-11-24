@@ -61,7 +61,7 @@ export default {
       let linkDomain = 'unknown';
 
       try {
-        linkDomain = new URL(link.url).hostname;
+        linkDomain = link.to ? 'internal' : new URL(link.url).hostname;
       }
       catch {
         linkDomain = 'invalid';
@@ -107,11 +107,18 @@ export default {
 
         <!-- links -->
         <div v-if="project.links" class="links">
-          <a :href="link.url" target="_blank" rel="noopener noreferrer" @click="onProjectLinkClick(link)" v-for="link in project.links" :key="link.name">
-            <div class="link">
-              {{ link.name }}
-            </div>
-          </a>
+          <template v-for="link in project.links" :key="link.name">
+            <router-link v-if="link.to" :to="link.to" @click="onProjectLinkClick(link)">
+              <div class="link">
+                {{ link.name }}
+              </div>
+            </router-link>
+            <a v-else :href="link.url" target="_blank" rel="noopener" @click="onProjectLinkClick(link)">
+              <div class="link">
+                {{ link.name }}
+              </div>
+            </a>
+          </template>
         </div>
 
         <div class="longDescription" v-html="project.longDescription"></div>

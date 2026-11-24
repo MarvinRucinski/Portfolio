@@ -122,10 +122,57 @@ export default {
     [
 
     {
+      title: "RentFriends",
+      icon: "rentfriends/logo.png",
+      iconClass: "app",
+      shortDescription: "A mobile and web app for finding flatmates, rooms and flats for rent across Poland.",
+      longDescription: `<a href="https://rentfriends.app" target="_blank" rel="noopener"><b>RentFriends</b></a> is a startup I co-founded with Aleksandra Kaziniec, where I work as <b>Co-Founder & CTO</b>. It helps people find a flatmate, a room or a flat that really fits them – matching people by lifestyle, budget and everyday habits – and helps landlords find tenants who fit an existing household.
+
+The app lets users browse flatmate profiles and listings, swipe through matches and chat directly in the app. The website <a href="https://rentfriends.app" target="_blank" rel="noopener">rentfriends.app</a> lets anyone search listings and flatmate profiles on a map without an account, and landlords and agencies can publish their offers there.
+
+RentFriends grew out of my earlier project, Duty.app (Dyżury.app) – an app for sharing household duties between roommates. It launched publicly on the App Store and Google Play in June 2026.
+
+As CTO I'm responsible for the whole product and technology: the mobile app, the website, the backend and integrations with real estate CRMs, as well as part of the sales work with landlords and agencies.`,
+      images: ['rentfriends/web-home.webp', 'rentfriends/app-match.webp'],
+      technologies: ['Vue', 'Capacitor', 'TypeScript', 'React', 'Tailwind', 'Python', 'Django', 'Postgres', 'Docker'],
+      links: [{
+        "name": "Website",
+        "url": "https://rentfriends.app"
+      },
+        {
+          "name": "AppStore",
+          "url": "https://apps.apple.com/app/id6502833411"
+        },
+        {
+          "name": "Google Play",
+          "url": "https://play.google.com/store/apps/details?id=app.dyzury"
+        }
+      ]
+    },
+
+
+      {
+        title: "WMS System",
+        icon: "masterche-logoplaste/logo.png",
+        shortDescription: "A Warehouse Management System (WMS) developed for Masterchem Logoplaste.",
+        longDescription: `As part of my work at Masterchem Logoplaste, I am developing a comprehensive Warehouse Management System (WMS) to streamline and optimize warehouse operations. 
+
+The system is designed to improve efficiency, reduce errors, and provide better visibility into warehouse operations. By leveraging Django's robust framework, the WMS offers a responsive and user-friendly interface that meets the needs of warehouse staff and management.`,
+        // images: ['masterche-logoplaste/wms-dashboard.png'],
+        technologies: ['Django', 'HTML5', 'CSS3', "JavaScript", 'Tailwind']
+      }
+
+    ],
+
+
+    //== Completed Projects ==//
+    [
+
+    {
       title: "Duty.app (Dyżury.app)",
       icon: "dyzury-app/logo.png",
       iconClass: "app",
-      shortDescription: "A mobile app that allows roommates to track and assign cleaning duties.",
+      shortDescription: "A mobile app that allows roommates to track and assign cleaning duties. It later evolved into RentFriends.",
         longDescription: `🚀 I'm excited to share the result of my work – the Duty App! 🏠📲
 
 This tool was created for people who share a space with others and want to maintain order without unnecessary stress. The app is especially useful for students renting apartments by the room, where it's easy to get confused about household chores.
@@ -139,18 +186,9 @@ With the Duty App, cleaning together is much simpler:
       images: ['dyzury-app/ss.png'],
         technologies: ['Capacitor', 'Vue', 'HTML5', 'JavaScript', 'CSS3', 'Python', 'Django', 'Docker'],
       links: [{
-        "name": "Website",
-        "url": "https://dyzury.app"
-      },
-        {
-          "name": "AppStore",
-          "url": "https://apps.apple.com/pl/app/dyżury-app/id6502833411"
-        },
-        {
-          "name": "Google Play",
-          "url": "https://play.google.com/store/apps/details?id=app.dyzury"
-        }
-      ]
+        "name": "Evolved into RentFriends →",
+        "to": "/RentFriends-/details"
+      }]
     },
 
 
@@ -186,17 +224,6 @@ From both a product and technical perspective, the project focuses on usability,
     },
 
 
-      {
-        title: "WMS System",
-        icon: "masterche-logoplaste/logo.png",
-        shortDescription: "A Warehouse Management System (WMS) developed for Masterchem Logoplaste.",
-        longDescription: `As part of my work at Masterchem Logoplaste, I am developing a comprehensive Warehouse Management System (WMS) to streamline and optimize warehouse operations. 
-
-The system is designed to improve efficiency, reduce errors, and provide better visibility into warehouse operations. By leveraging Django's robust framework, the WMS offers a responsive and user-friendly interface that meets the needs of warehouse staff and management.`,
-        // images: ['masterche-logoplaste/wms-dashboard.png'],
-        technologies: ['Django', 'HTML5', 'CSS3', "JavaScript", 'Tailwind']
-      },
-
       //Budka wyciszająca 
       {
         title: "Soundproof Booths",
@@ -209,13 +236,7 @@ This functionality will be available directly within the <b>toPWR</b> mobile app
 By combining automation, IoT, and software integration, this initiative aims to enhance the comfort and efficiency of students using the campus facilities.`,
         // images: ['budka-wyciszajaca/img1.jpeg', 'budka-wyciszajaca/img2.jpeg'],
         technologies: ['ESP8266'],
-      }
-
-    ],
-
-
-    //== Completed Projects ==//
-    [
+      },
 
       {
         title: "Process Line Project",
