@@ -133,7 +133,7 @@ The app lets users browse flatmate profiles and listings, swipe through matches 
 RentFriends grew out of my earlier project, Duty.app (Dyżury.app) – an app for sharing household duties between roommates. It launched publicly on the App Store and Google Play in June 2026.
 
 As CTO I'm responsible for the whole product and technology: the mobile app, the website, the backend and integrations with real estate CRMs, as well as part of the sales work with landlords and agencies.`,
-      images: ['rentfriends/web-home.webp', 'rentfriends/app-match.webp'],
+      images: ['rentfriends/app-and-web.webp', 'rentfriends/app-match.webp', 'rentfriends/app-and-map.webp', 'rentfriends/app-two-phones.webp'],
       technologies: ['Vue', 'Capacitor', 'TypeScript', 'React', 'Tailwind', 'Python', 'Django', 'Postgres', 'Docker'],
       links: [{
         "name": "Website",
